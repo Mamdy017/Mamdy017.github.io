@@ -18804,7 +18804,7 @@ div#small-dialog iframe {
 /* movetop styling */
 #movetop {
   position: fixed;
-  bottom: 90px;
+  bottom: 30px;
   right: 15px;
   z-index: 9;
   font-size: 16px;
@@ -19168,7 +19168,7 @@ h3.title-style {
   display: grid;
   align-items: center;
   min-height: 100vh;
-  background: url(../images/banner2.jpg) no-repeat center;
+  background: url(../images/Group\ 2.png) no-repeat center;
   -ms-background-size: cover;
   background-size: cover;
   position: relative;
