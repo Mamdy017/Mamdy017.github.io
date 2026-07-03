@@ -1,1227 +1,751 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mon portofolio</title>
-    <link rel="icon" href="assets/images/Group1.png">
-    <link
-        href="http://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camara Mamady — Développeur Full Stack</title>
+  <meta name="description" content="Camara Mamady, Développeur Full Stack basé à Bamako, Mali. Spécialisé en Java, Spring Boot, Angular, Flutter, PHP et UI/UX Design.">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="3KPuzLo8Do1_TrrnPRRXeix4xNWav6iuPzVdrEFAQ1U">
+  <link rel="icon" href="assets/images/Group1.png" type="image/png">
 
-    <link rel="stylesheet" href="assets/css/style-liberty.css">
-    <meta name="robots" content="noindex">
-    <meta name="description" content="Je suis Camara Mamady un Dévelloppeur full stack, étudiant à Orange Digital 
-    détenteur d'une licence en programmation et Développement informatique. J'ai travaillé sur plusieurs projets
-    et je suis doté d'un excellent sens d'écoute. Le travail en équipe n'a jamais été un soucis au contraire
-    c'est dans lui que j'arrive à exploiter une grande partie de mes potentialités ">
-    <meta name="google-site-verification" content="3KPuzLo8Do1_TrrnPRRXeix4xNWav6iuPzVdrEFAQ1U" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* Inline override to ensure Font Awesome loads */
+    .fa, .fas, .fab, .far { font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important; }
+  </style>
 </head>
-
 <body>
 
-    <!-- header -->
-    <header id="site-header" class="fixed-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html">
-                    <i class="fab fa-medium-m">.</i>
-                </a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
-                        <li class="nav-item">
-                            <a class="nav-link active " aria-current="page" href="#home">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">A propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#blog">Mes réalisations</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#service">Services</a>
-                        </li>
+  <!-- ====== CURSEUR ====== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <form
-                        action="https://demo.w3layouts.com/demos_new/template_demo/28-07-2021/biodata-liberty-demo_Free/2002651968/web/error.html"
-                        method="GET" class="d-flex search-header">
-                        <input class="form-control" type="search" placeholder="Recherche..." aria-label="Search"
-                            required>
-                        <button class="btn btn-style" type="submit">Rechercher</button>
-                    </form>
-                </div>
-                <!-- toggle switch for light and dark theme -->
-                <div class="cont-ser-position">
-                    <nav class="navigation">
-                        <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="checkbox">
-                                <input type="checkbox" id="checkbox">
-                                <span class="mode-container">
-                                    <i class="gg-sun"></i>
-                                    <i class="gg-moon"></i>
-                                </span>
-                            </label>
-                        </div>
-                    </nav>
-                </div>
-                <!-- //toggle switch for light and dark theme -->
-            </nav>
-        </div>
-    </header>
-    <!-- //header -->
-
-    <!-- banner section -->
-    <section class="w3l-banner py-5" id="home">
-        <div class="container py-md-5 py-4">
-            <div class="row align-items-center pt-4">
-                <div class="col-md-6 banner-left pe-xl-5">
-                    <h4>Salut, Je suis Camara Mamady</h4>
-                    <h3 class="mb-3 mt-1"><span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
-                    <p class="banner-sub me-md-5">J'adore travailler en tant que Développeur Full Stack. Je m'efforce
-                         toujours de créer une interface utilisateur exceptionnelle tout en assurant la cohérence et la logique du système.
-                          Mon objectif est de combiner harmonieusement esthétisme et fonctionnalités pour offrir une expérience utilisateur attrayante et fluide.
-                    </p>
-                    <div class="d-flex align-items-center buttons-banner mt-sm-5 mt-4">
-                        <a href="#about" class="btn btn-style me-2">A propos de moi</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                </div>
-            </div>
-        </div>
-        <!-- animations icons -->
-        <div class="icon-effects-w3-1 text-right">
-            <img src="assets/images/icon2.png" alt="" class="img-fluid">
-        </div>
-        <div class="icon-effects-w3-2 text-right">
-            <img src="assets/images/icon3.png" alt="" class="img-fluid">
-        </div>
-        <div class="icon-effects-w3-3 text-right">
-            <img src="assets/images/icon1.png" alt="" class="img-fluid">
-        </div>
-        <div class="icon-effects-w3-4 text-right">
-            <img src="assets/images/icon6.png" alt="" class="img-fluid">
-        </div>
-        <!-- //animations icons -->
-    </section>
-    <!-- //banner section -->
-
-    <!-- logo partners -->
-    <div class="w3l-clients pt-5 pb-4" id="clients">
-        <div class="container">
-            <div class="company-logos text-center">
-                <div class="row mx-auto justify-content-center">
-                    <div class="col-md-2 col-sm-4 col-6 offset-lg-1">
-                        <img src="assets/images/logo1.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-6">
-                        <img src="assets/images/logo2.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-6 mt-sm-0 mt-3">
-                        <img src="assets/images/logo3.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-6 mt-md-0 mt-3">
-                        <img src="assets/images/logo4.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-6 mt-md-0 mt-3">
-                        <img src="assets/images/logo5.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- about section -->
-    <section class="w3l-aboutblock1 py-5" id="about">
-        <div class="container py-md-5 py-4">
-            <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <div class="position-relative">
-                        <img src="assets/images/IMG_8340.jpeg" alt="" class="radius-image img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-8 ps-lg-5 mt-lg-0 mt-5">
-                    <h3 class="title-style">A propos de moi</h3>
-                    <p class="mt-3">Je suis Camara Mamady, un Développeur Full Stack étudiant à Orange Digital,
-                         titulaire d'une licence en génie logiciel. J'ai travaillé sur plusieurs projets et
-                          j'ai un excellent sens de l'écoute. J'adore travailler en équipe, car c'est là que 
-                          je peux exploiter pleinement mes compétences. Mon objectif est de créer des interfaces intuitives
-                           et esthétiques tout en assurant la robustesse technique. Passionné par le développement, 
-                           je reste toujours à l'affût des dernières tendances pour progresser dans mon domaine. Je suis prêt à relever
-                            de nouveaux défis et contribuer positivement aux projets qui se présenteront à moi.</p>
-                    <div class="my-info mt-md-5 mt-4">
-                        <ul class="single-info">
-                            <li class="name-style">Nom & Prenom</li>
-                            <li>:</li>
-                            <li>
-                                <p>Camara Mamady </p>
-                            </li>
-                        </ul>
-                        <!-- <ul class="single-info">
-                            <li class="name-style">Age</li>
-                            <li>:</li>
-                            <li>
-                                <p>22 ans</p>
-                            </li>
-                        </ul> -->
-                        <ul class="single-info">
-                            <li class="name-style">De</li>
-                            <li>:</li>
-                            <li>
-                                <p>Mali, ML</p>
-                            </li>
-                        </ul>
-                        <ul class="single-info">
-                            <li class="name-style">Email</li>
-                            <li>:</li>
-                            <li>
-                                <p><a href="mailto:camaramamady9160@gmail.com">camaramamady9160@gmail.com</a></p>
-                            </li>
-                        </ul>
-                    </div>
-                    <a download="" href="assets/images/Moncv.pdf" class="btn btn-style mt-5">Telecharger CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //about section -->
-
-    <!-- text with button -->
-    <section class="w3l-timeline-1 text-center py-5">
-        <div class="container py-lg-5 py-4">
-            <div class="mx-auto" style="max-width:800px">
-                <h3 class="title-style mb-4">Pourquoi m'engager pour votre prochain projet ?</h3>
-                <p>Mon objectif est de créer des produits de haute qualité, où l'interface utilisateur 
-                    est en parfait accord avec le backend, offrant ainsi une expérience utilisateur harmonieuse 
-                    et plaisante. Je m'efforce toujours de donner le meilleur de moi-même pour répondre aux besoins 
-                    des utilisateurs tout en assurant la stabilité et la sécurité du système. Travailler en tant que Développeur
-                     Full Stack me permet d'exprimer pleinement ma créativité et d'utiliser mes compétences
-                     techniques pour offrir des solutions complètes et innovantes.</p>
-                <a href="#services" class="btn btn-style mt-5">En savoir plus</a>
-            </div>
-        </div>
-    </section>
-    <!-- //text with button -->
-
-    <!-- about2 section -->
-    <section class="w3l-about2 py-5">
-        <div class="container py-lg-5 py-md-4 py-2">
-            <div class="row align-items-center">
-                <div class="col-lg-6 pe-lg-5">
-                    <h5 class="title-small mb-1">Développeur full Stack</h5>
-                    <h3 class="title-style">J'aime concrétiser mes idées</h3>
-                    <div class="cwp23-text-cols mt-lg-5 mt-4">
-                        <!-- <div class="column">
-                            <span>120+</span>
-                            <h4>Clients heureux</h4>
-                            <p>J'aide mes clients à augmenter leur profit en renforçant leur visibilité en ligne.
-                            </p>
-                        </div> -->
-                        <div class="column">
-                            <span>10+</span>
-                            <h4>Projets achevés </h4>
-                            <p>J'ai travaillé sur divers projets, démontrant ma polyvalence et mon adaptabilité.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-lg-6 cwp23-text align-self mt-lg-0 mt-5">
-                    <img src="assets/images/blog5.jpg" alt="" class="radius-image img-fluid">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //about2 section -->
-    <div style="margin: 8px auto; display: block; text-align:center;">
-    </div>
-    <!-- qualification section -->
-    <section class="w3l-timeline-1 py-5">
-        <div class="container py-lg-5 py-4">
-            <div class="title-heading-w3 text-center mb-sm-5 mb-4">
-                <h5 class="title-small">Qualification</h5>
-                <h3 class="title-style" onclick="myFunction()">Mes qualifications <i class="fa fa-angle-down"></i></h3>
-            </div>
-            <div id="myDIV">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h5 class="sub-title-timeline"><i class="fas fa-graduation-cap"></i> Education</h5>
-                        <div class="timeline">
-                            <div class="column">
-                                <div class="title">
-                                    <h2>Certicat de developer full stack web/mobile</h2>
-                                </div>
-                                <div class="description">
-                                    <p>ORANGE DIGITAL CENTER</p>
-                                    <h6><i class="fas fa-calendar-alt"></i> Juin 2022 Mars 2023</h6>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="title">
-                                    <h2>Licence en génie logiciel</h2>
-                                </div>
-                                <div class="description">
-                                    <p>INTEC-Sup</p>
-                                    <h6><i class="fas fa-calendar-alt"></i> 2021 - 2022</h6>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="title">
-                                    <h2>DUT(Diplome Universtaire de Technologies</h2>
-                                </div>
-                                <div class="description">
-                                    <p>INTEC-Sup</p>
-                                    <h6><i class="fas fa-calendar-alt"></i> 2019 - 2021)</h6>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="title">
-                                    <h2>Bac</h2>
-                                </div>
-                                <div class="description">
-                                    <p>LMBS</p>
-                                    <h6><i class="fas fa-calendar-alt"></i>2019</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 mt-lg-0 mt-4">
-                        <h5 class="sub-title-timeline"><i class="fas fa-briefcase"></i> Experience</h5>
-                        <div class="timeline">
-                            <div class="column">
-                                <div class="title">
-                                    <h2>Formation en intensive</h2>
-                                </div>
-                                <div class="description">
-                                    <p>A orange digital kalanso</p>
-                                    <h6><i class="fas fa-calendar-alt"></i> 2022 - encours</h6>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="title">
-                                    <h2>Stage</h2>
-                                </div>
-                                <div class="description">
-                                    <p>3 stages</p>
-                                    <h6><i class="fas fa-calendar-alt"> 2021</i></h6>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="title">
-                                    <h2>Le site web</h2>
-                                </div>
-                                <div class="description">
-                                    <p> <b>Une application de challenge des Développeurs</b></p>
-                                  <small>En Spring-boot, Angular, Ionic, Mysql,Hibernate</small>
-                                    <h6><i class="fas fa-calendar-alt"></i>2023</h6>
-                                </div>
-                                <div class="description">
-                                    <p> <b>Un site de location et vente de vahicule</b></p>
-                                    <small>En Php,html & css, JavaScript, Mysql</small>
-                                    <h6><i class="fas fa-calendar-alt"></i>2022</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- //qualification section -->
-
-    <!-- skills section -->
-    <section class="w3l-progress py-5" id="progress">
-        <div class="container py-md-5 py-3">
-            <div class="title-heading-w3 text-center mb-sm-5 mb-4">
-                <h5 class="title-small mb-1">Compétences</h5>
-                <h3 class="" onclick="frontrnd()">Front-end <i class="fa fa-angle-down"></i></h3>
-            </div>
-            <div id="myFront">
-                <div class="row py-lg-2 monte2">
-                    <div class="col-lg-6 pe-lg-5">
-
-                        <div class="progress-info info2">
-                            <h6 class="progress-tittle">HTML/CSS <span class="">95%</span>
-                            </h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-2" role="progressbar"
-                                    style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-info info3">
-                            <h6 class="progress-tittle">JavaScript <span class="">60%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-3" role="progressbar"
-                                    style="width: 60%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="progress-info info4 mb-0">
-                            <h6 class="progress-tittle">React <span class="">85%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-4" role="progressbar"
-                                    style="width: 85%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
-                    <div class="col-lg-6 ps-lg-5 mt-lg-0 mt-5">
-                        <div class="progress-info info1">
-                            <h6 class="progress-tittle">Web Design <span class="">80%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
-                                    style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-info info2">
-                            <h6 class="progress-tittle">Figma <span class="">95%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-2" role="progressbar"
-                                    style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-info info4 mb-0">
-                            <h6 class="progress-tittle">UI/UX Design <span class="">85%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-4" role="progressbar"
-                                    style="width: 85%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="container py-md-5 monte1">
-            <div class="title-heading-w3 text-center mb-sm-5 mb-4">
-                <h3 class="" onclick="backend()">Back-end <i class="fa fa-angle-down"></i></h3>
-            </div>
-            <div id="myBack">
-                <div class="row py-lg-2 monte2">
-                    <div class="col-lg-6 pe-lg-5">
-                        <div class="progress-info info1">
-                            <h6 class="progress-tittle">Node <span class="">80%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
-                                    style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress-info info3">
-                            <h6 class="progress-tittle">Firebase <span class="">60%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-3" role="progressbar"
-                                    style="width: 60%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 ps-lg-5 mt-lg-0 mt-5">
-                        <div class="progress-info info1">
-                            <h6 class="progress-tittle">Java <span class="">80%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
-                                    style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-info info2">
-                            <h6 class="progress-tittle">PHP <span class="">95%</span>
-                            </h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-2" role="progressbar"
-                                    style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container py-md-5 monte">
-            <div class="title-heading-w3 text-center mb-sm-5 mb-4">
-                <h3 class="" onclick="framework()">Framework <i class="fa fa-angle-down"></i></h3>
-            </div>
-            <div id="myFrame">
-                <div class="row py-lg-2 monte2">
-                    <div class="col-lg-6 pe-lg-5">
-                        <div class="progress-info info1">
-                            <h6 class="progress-tittle">Spring-boot <span class="">80%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
-                                    style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress-info info3">
-                            <h6 class="progress-tittle">Laravel <span class="">60%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-3" role="progressbar"
-                                    style="width: 60%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-info info2">
-                            <h6 class="progress-tittle">Bootstrap <span class="">95%</span>
-                            </h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-2" role="progressbar"
-                                    style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 ps-lg-5 mt-lg-0 mt-5">
-                        <div class="progress-info info1">
-                            <h6 class="progress-tittle">Flutter <span class="">80%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
-                                    style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-info info1">
-                            <h6 class="progress-tittle">Angular <span class="">80%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
-                                    style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-info info2">
-                            <h6 class="progress-tittle">Ionic <span class="">95%</span>
-                            </h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-2" role="progressbar"
-                                    style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container py-md-5 monte">
-            <div class="title-heading-w3 text-center mb-sm-5 mb-4">
-                <h3 class="" onclick="Outils()">Outils et CMS <i class="fa fa-angle-down"></i></h3>
-            </div>
-            <div id="myOutils">
-                <div class="row py-lg-2 monte2">
-                    <div class="col-lg-6 pe-lg-5">
-                        <div class="progress-info info1">
-                            <h6 class="progress-tittle">Mysql <span class="">80%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
-                                    style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="progress-info info3">
-                            <h6 class="progress-tittle"> Wordpress<span class="">60%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-3" role="progressbar"
-                                    style="width: 60%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 ps-lg-5 mt-lg-0 mt-5">
-                        <div class="progress-info info1">
-                            <h6 class="progress-tittle">Github <span class="">80%</span></h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
-                                    style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="progress-info info2">
-                            <h6 class="progress-tittle">Git <span class="">95%</span>
-                            </h6>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped gradient-2" role="progressbar"
-                                    style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- blog-post -->
-    <section class="w3l-blogpost-content py-5">
-        <div class="container py-lg-4 py-4" id="blog">
-            <div class="title-heading-w3 text-center mb-sm-5 mb-4">
-                <h5 class="title-small">Réalisations</h5>
-                <!-- <h3 class="title-style">Latest Updates</h3> -->
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html">
-                                        <img class="card-img-bottom d-block radius-image" src="assets/images/ERP.jpg"
-                                            alt="Card image cap">
-                                    </a>
-                                </div>
-                                <div class="card-body blog-details">
-                                    <a href="blog-single.html" class="blog-desc">ERP (Enterprise Ressource Planning)
-                                    </a>
-                                    <div class="author align-items-center">
-                                        <a href="#img" class="comment-img">
-                                            <img src="assets/images/ERP1.png" alt="" class="img-fluid">
-                                        </a>
-                                        <ul class="blog-meta">
-                                            <li>
-                                                <a href="#">ODC </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mt-md-0 mt-4">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html">
-                                        <img class="card-img-bottom d-block radius-image"
-                                            src="assets/images/vehicule.png" alt="Card image cap">
-                                    </a>
-                                </div>
-                                <div class="card-body blog-details">
-                                    <a href="blog-single.html" class="blog-desc">La location et vente de vehicule en
-                                        ligne</a>
-
-                                    <div class="author align-items-center">
-                                        <a href="#img" class="comment-img">
-                                            <img src="assets/images/vehicule.png" alt="" class="img-fluid">
-                                        </a>
-                                        <ul class="blog-meta">
-                                            <li>
-                                                <a href="#">INTEC </a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mt-md-5 mt-4">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html">
-                                        <img class="card-img-bottom d-block radius-image" src="assets/images/arti.png"
-                                            alt="Card image cap">
-                                    </a>
-                                </div>
-                                <div class="card-body blog-details">
-                                    <a href="blog-single.html" class="blog-desc">Site Artisanale du Mali
-                                    </a>
-                                    <div class="author align-items-center">
-                                        <a href="#img" class="comment-img">
-                                            <img src="assets/images/artisanat.jpg" alt="" class="img-fluid">
-                                        </a>
-                                        <ul class="blog-meta">
-                                            <li>
-                                                <a href="#">ODC</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mt-md-5 mt-4">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html">
-                                        <img class="card-img-bottom d-block radius-image" src="assets/images/envi1.png"
-                                            alt="Card image cap">
-                                    </a>
-                                </div>
-                                <div class="card-body blog-details">
-                                    <a href="blog-single.html" class="blog-desc">Site Environnementale
-                                    </a>
-                                    <div class="author align-items-center">
-                                        <a href="#img" class="comment-img">
-                                            <img src="assets/images/envi.jpg" alt="" class="img-fluid">
-                                        </a>
-                                        <ul class="blog-meta">
-                                            <li>
-                                                <a href="#">ODC </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mt-md-5 mt-4">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html">
-                                        <img class="card-img-bottom d-block radius-image" src="assets/images/orange.png"
-                                            alt="Card image cap">
-                                    </a>
-                                </div>
-                                <div class="card-body blog-details">
-                                    <a href="blog-single.html" class="blog-desc"> Site de orange digital Center
-                                    </a>
-                                    <div class="author align-items-center">
-                                        <a href="#img" class="comment-img">
-                                            <img src="assets/images/orange1.png" alt="" class="img-fluid">
-                                        </a>
-                                        <ul class="blog-meta">
-                                            <li>
-                                                <a href="#">ODC </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mt-md-5 mt-4">
-                            <div class="card">
-                                <div class="card-header p-0 position-relative">
-                                    <a href="blog-single.html">
-                                        <img class="card-img-bottom d-block radius-image"
-                                            src="assets/images/titktok.jpg" alt="Card image cap">
-                                    </a>
-                                </div>
-                                <div class="card-body blog-details">
-                                    <a href="blog-single.html" class="blog-desc">Clone de tiktok
-                                    </a>
-                                    <div class="author align-items-center">
-                                        <a href="#img" class="comment-img">
-                                            <img src="assets/images/images.png" alt="" class="img-fluid">
-                                        </a>
-                                        <ul class="blog-meta">
-                                            <li>
-                                                <a href="#">ODC </a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- pagination -->
-                    <div class="pagination-wrapper mt-5 pt-lg-3 text-center">
-                        <ul class="page-pagination">
-                            <li><span aria-current="page" class="page-numbers current">1</span></li>
-                            <li><a class="page-numbers" href="#url">2</a></li>
-
-                            <li><a class="next" href="#url">Suivant <span class="fa fa-angle-right"></span></a></li>
-                        </ul>
-                    </div>
-                    <!-- //pagination -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //blog-posts -->
-    <!-- grids section -->
-    <section class="w3l-bottom-grids-6 py-5" id="service">
-        <div class="container py-md-5 py-4">
-            <div class="title-heading-w3 text-center mb-sm-5 mb-4">
-                <h5 class="title-small mb-1">Spécialisé dans</h5>
-                <h3 class="title-style">Ce que j'offre</h3>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 grids-feature">
-                    <div class="area-box active">
-                        <div class="icon-style">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h4><a href="#feature" class="title-head">Dévs back</a></h4>
-                        <a href="#about" class="btn more p-0">En savoir plus<i
-                                class="fas fa-long-arrow-alt-right ms-1"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 grids-feature mt-md-0 mt-4">
-                    <div class="area-box">
-                        <div class="icon-style">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h4><a href="#feature" class="title-head">Dévs front</a></h4>
-                        <a href="#about" class="btn more p-0">En savoir plus<i
-                                class="fas fa-long-arrow-alt-right ms-1"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 grids-feature mt-lg-0 mt-4">
-                    <div class="area-box">
-                        <div class="icon-style">
-                            <i class="fas fa-layer-group"></i>
-                        </div>
-                        <h4><a href="#feature" class="title-head">Logo</a></h4>
-                        <a href="#about" class="btn more p-0">En savoir plus<i
-                                class="fas fa-long-arrow-alt-right ms-1"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 grids-feature mt-lg-0 mt-4">
-                    <div class="area-box">
-                        <div class="icon-style">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <h4><a href="#feature" class="title-head">Graphic Design</a></h4>
-                        <a href="#about" class="btn more p-0">En savoir plus<i
-                                class="fas fa-long-arrow-alt-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- service section -->
-    <section class="w3l-servicesblock1 py-5" id="services">
-        <div class="container py-md-5 py-4">
-            <div class="title-heading-w3 text-center mb-sm-5 mb-4">
-                <h5 class="title-small mb-1">Ce que je fais?</h5>
-                <h3 class="title-style">Comment je peux aider votre prochain projet</h3>
-            </div>
-            <div class="w3-services-grids py-lg-4">
-                <div class="fea-gd-vv row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-gd icon-yellow">
-                            <div class="icon">
-                                <i class="fas fa-laptop"></i>
-                            </div>
-                            <div class="icon-info">
-                                <a href="#url">Web design<br> et Développement </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-md-0 mt-4">
-
-                        <div class="feature-gd icon-light-blue">
-                            <div class="icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="icon-info">
-                                <a href="#url">JQuery & Java<br> programmation</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-lg-0 mt-md-5 mt-4">
-                        <div class="feature-gd icon-dark-green">
-                            <div class="icon">
-                                <i class="fas fa-link"></i>
-                            </div>
-                            <div class="icon-info">
-                                <a href="#url">Java développer <br> des apis</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-lg-0 mt-md-5 mt-4">
-                        <div class="feature-gd icon-pink">
-                            <div class="icon">
-                                <i class="fas fa-code-branch"></i>
-                            </div>
-                            <div class="icon-info">
-                                <a href="#url">Ionic<br>apps hybride</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-md-5 mt-4">
-                        <div class="feature-gd icon-light-green">
-                            <div class="icon">
-                                <i class="fab fa-apple"></i>
-                            </div>
-                            <div class="icon-info">
-                                <a href="#url">Développer des<br>apps iOS </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-md-5 mt-4">
-                        <div class="feature-gd icon-vilot">
-                            <div class="icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="icon-info">
-                                <a href="#url">Développer des apps Mobiles</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-md-5 mt-4">
-                        <div class="feature-gd icon-blue">
-                            <div class="icon">
-                                <i class="fab fa-android"></i>
-                            </div>
-                            <div class="icon-info">
-                                <a href="#url">Développer des apps Androïd</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-md-5 mt-4">
-                        <div class="feature-gd icon-red">
-                            <div class="icon">
-                                <i class="fab fa-php"></i>
-                            </div>
-                            <div class="icon-info">
-                                <a href="#url">Php développer des apps Web</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <a href="#service" class="btn btn-style">En savoir plus</a>
-            </div>
-        </div>
-    </section>
-    <!-- //service section -->
-
-    <section class="w3l-contact py-5" id="contact">
-        <div class="container py-lg-5 py-4">
-            <div class="title-heading-w3 text-center mb-sm-5 mb-4">
-                <h5 class="title-small">ENTRER EN CONTACT</h5>
-                <h3 class="title-style">Contactez-moi</h3>
-            </div>
-            <div class="row contact-block">
-                <div class="col-md-6 contact-left pe-lg-5">
-                    <h3 class="mb-sm-4 mb-3">Information du contact</h3>
-                    <p class="cont-para mb-sm-5 mb-4">J'aime discuter de nouveaux projets et relever des défis de conception. N'hésitez pas 
-                        à partager autant d'informations que possible, car cela nous permettra d'exploiter pleinement notre premier échange 
-                        et d'en tirer le meilleur parti. Je suis ouvert à toutes les idées et prêt à apporter mon expertise pour contribuer
-                         au succès du projet. Ensemble, nous pouvons créer quelque chose de formidable !</p>
-                    <div class="cont-details">
-                        <p><i class="fas fa-map-marker-alt"></i>Bamako, Mali, sebenikoro</p>
-                        <p><i class="fas fa-phone-alt"></i><a href="#">+223 91 22 88 29</a></p>
-                        <p><i class="fas fa-envelope-open-text"></i><a href="mailto:camaramamady9160@gmail.com"
-                                class="mail">camaramamady9160@gmail.com</a></p>
-                    </div>
-                    <h4 class="mb-3 mt-5">Suivez moi sur </h4>
-                    <ul class="social-icons-contact">
-                        <li>
-                            <a href="#twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#linkedinin">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Mamdy017/Mamdy017.github.io">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 contact-right mt-md-0 mt-5 ps-lg-0">
-                    <form action="#" method="post" class="signin-form">
-                        <div class="input-grids">
-                            <input type="text" name="nom" id="nom" placeholder="Votre nom*" class="contact-input"
-                                autocomplete="off">
-                            <input type="email" name="email" id="email" placeholder="Votre Email*" class="contact-input"
-                                autocomplete="off">
-                            <input type="text" name="w3lSubect" id="sujet" placeholder="Sujet*" class="contact-input"
-                                autocomplete="off">
-                        </div>
-                        <div class="form-input">
-                            <textarea name="w3lMessage" id="msg" placeholder="Votre Message*"
-                                autocomplete="off"></textarea>
-                        </div>
-                        <button class="btn btn-style" id="envoie">Envoyer le Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- footer -->
-    <footer class="footer-w3ls text-center py-2">
-        <div class="container pt-4">
-            <div class="mx-auto" style="max-width:600px;">
-                <!-- <a href="index.html" class="footer-logo py-1">
-                    <i class="fab fa-medium-m"></i>.
-                </a> -->
-                <div class="social-icons-main mt-4 pb-3">
-                    <ul class="social-icons3">
-                        <li>
-                            <a href="#facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#linkedinin">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#dribbble">
-                                <i class="fab fa-dribbble"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- copyright -->
-            <p class="copy-right-w3 text-white mt-5 pt-4">© 2022 Portofolio. Tous Drois réservés | par Mamdy017
-            </p>
-        </div>
-    </footer>
-    <!-- //footer -->
-
-    <!-- Js scripts -->
-    <!-- move top -->
-    <button onclick="topFunction()" id="movetop" title="Go to top">
-        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+  <!-- ====== NAVIGATION ====== -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      Mamady<span class="logo-dot"></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact" class="nav-cta">Me contacter</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
     </button>
+  </nav>
 
-    <script>
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            scrollFunction()
-        };
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">À propos</a>
+    <a href="#skills" class="mobile-link">Compétences</a>
+    <a href="#projects" class="mobile-link">Projets</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("movetop").style.display = "block";
-            } else {
-                document.getElementById("movetop").style.display = "none";
-            }
+  <!-- ====== HERO ====== -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Disponible pour de nouveaux projets
+      </div>
+
+      <h1 class="hero-name">
+        Camara<br>
+        <span class="accent-word">Mamady</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        <span class="hero-typed" id="heroTyped"></span><span class="hero-cursor"></span>
+        <br>Bamako, Mali · Full Stack Developer
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary" id="hero-work-btn">
+          Voir mes projets <span>↓</span>
+        </a>
+        <a href="assets/images/Moncv.pdf" download class="btn-ghost" id="hero-cv-btn">
+          <i class="fas fa-arrow-down" style="font-size:0.8em"></i> Télécharger CV
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Projets réalisés</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4+</div>
+          <div class="stat-label">Ans d'expérience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Passion du code</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ====== ABOUT ====== -->
+  <section id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <!-- Photo -->
+        <div class="about-photo-wrapper reveal">
+          <div class="about-photo-frame">
+            <img src="assets/images/IMG_8340.jpeg" alt="Photo de Camara Mamady">
+            <div class="about-photo-overlay"></div>
+          </div>
+          <div class="about-badge-card">
+            <div class="card-num">10+</div>
+            <div class="card-text">Projets livrés</div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="about-content reveal">
+          <span class="section-tag">À propos</span>
+          <h2 class="section-title">Je crée des<br>expériences qui comptent</h2>
+          <p class="section-desc">
+            Développeur Full Stack passionné, titulaire d'une licence en génie logiciel (INTEC-Sup) et certifié par Orange Digital Center. 
+            J'aime construire des interfaces intuitives et esthétiques tout en assurant la robustesse du backend. 
+            Mon objectif : allier esthétisme, performance et innovation.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="info-item">
+              <div class="info-label">Nom</div>
+              <div class="info-value">Camara Mamady</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Localisation</div>
+              <div class="info-value">Bamako, Mali</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Email</div>
+              <div class="info-value" style="font-size:0.78rem">
+                <a href="mailto:camaramamady9160@gmail.com" style="color:var(--accent)">camaramamady9160@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">Statut</div>
+              <div class="info-value" style="color:var(--green)">● Disponible</div>
+            </div>
+          </div>
+
+          <a href="assets/images/Moncv.pdf" download class="btn-primary" id="about-cv-btn" style="display:inline-flex;width:fit-content;margin-top:1rem">
+            <i class="fas fa-arrow-down" style="font-size:0.8em"></i> Télécharger le CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ====== SKILLS ====== -->
+  <section id="skills">
+    <div class="section-container">
+      <div class="skills-layout">
+        <!-- Left: categories -->
+        <div class="reveal">
+          <span class="section-tag">Compétences</span>
+          <h2 class="section-title">Mon stack<br>technique</h2>
+          <p class="section-desc" style="margin-bottom:2.5rem">
+            Une palette variée de technologies maîtrisées, du front-end moderne au back-end robuste.
+          </p>
+
+          <div class="skills-categories" id="skillCategories">
+            <button class="category-btn active" data-target="frontend" id="btn-frontend">
+              <span><span class="cat-icon">⚡</span> Front-End</span>
+              <span class="cat-arrow">›</span>
+            </button>
+            <button class="category-btn" data-target="backend" id="btn-backend">
+              <span><span class="cat-icon">⚙️</span> Back-End</span>
+              <span class="cat-arrow">›</span>
+            </button>
+            <button class="category-btn" data-target="frameworks" id="btn-frameworks">
+              <span><span class="cat-icon">🧩</span> Frameworks</span>
+              <span class="cat-arrow">›</span>
+            </button>
+            <button class="category-btn" data-target="tools" id="btn-tools">
+              <span><span class="cat-icon">🛠️</span> Outils & BDD</span>
+              <span class="cat-arrow">›</span>
+            </button>
+          </div>
+
+          <!-- Tech tags -->
+          <div class="tech-tags" style="margin-top:2rem">
+            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">Angular</span>
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Ionic</span>
+            <span class="tech-tag">Laravel</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">Figma</span>
+          </div>
+        </div>
+
+        <!-- Right: progress bars -->
+        <div class="reveal">
+          <!-- Frontend panel -->
+          <div class="skills-panel active" id="panel-frontend">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">HTML / CSS</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-pct">60%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="60"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Web Design</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Figma / UI-UX</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+          </div>
+
+          <!-- Backend panel -->
+          <div class="skills-panel" id="panel-backend">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Java</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">PHP</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Node.js</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Firebase</span>
+                <span class="skill-pct">60%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="60"></div></div>
+            </div>
+          </div>
+
+          <!-- Frameworks panel -->
+          <div class="skills-panel" id="panel-frameworks">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Spring Boot</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Angular</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Flutter</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Ionic</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Laravel</span>
+                <span class="skill-pct">60%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="60"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Bootstrap</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95"></div></div>
+            </div>
+          </div>
+
+          <!-- Tools panel -->
+          <div class="skills-panel" id="panel-tools">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">MySQL</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Git / GitHub</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">WordPress</span>
+                <span class="skill-pct">60%</span>
+              </div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="60"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ====== PROJECTS ====== -->
+  <section id="projects">
+    <div class="section-container">
+      <div class="projects-header reveal">
+        <div>
+          <span class="section-tag">Réalisations</span>
+          <h2 class="section-title">Projets sélectionnés</h2>
+        </div>
+        <p class="section-desc" style="margin:0">
+          Des projets variés, du web au mobile,<br>chacun avec une attention particulière au détail.
+        </p>
+      </div>
+
+      <div class="projects-grid reveal">
+        <!-- Project 1 – Large -->
+        <div class="project-card large" id="proj-erp">
+          <div class="project-num">01</div>
+          <img src="assets/images/ERP.jpg" alt="ERP Enterprise Resource Planning" class="project-img">
+          <div class="project-title">ERP — Enterprise Resource Planning</div>
+          <div class="project-tags">
+            <span class="project-tag">Spring Boot</span>
+            <span class="project-tag">Angular</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">Hibernate</span>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" id="proj-vehicle">
+          <div class="project-num">02</div>
+          <img src="assets/images/vehicule.png" alt="Location et vente de véhicule" class="project-img">
+          <div class="project-title">Location & Vente de Véhicules en Ligne</div>
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">HTML/CSS</span>
+            <span class="project-tag">MySQL</span>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" id="proj-artisan">
+          <div class="project-num">03</div>
+          <img src="assets/images/arti.png" alt="Site artisanal du Mali" class="project-img">
+          <div class="project-title">Site Artisanal du Mali</div>
+          <div class="project-tags">
+            <span class="project-tag">Angular</span>
+            <span class="project-tag">Spring Boot</span>
+            <span class="project-tag">ODC</span>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" id="proj-env">
+          <div class="project-num">04</div>
+          <img src="assets/images/envi1.png" alt="Site environnemental" class="project-img">
+          <div class="project-title">Plateforme Environnementale</div>
+          <div class="project-tags">
+            <span class="project-tag">Web</span>
+            <span class="project-tag">ODC</span>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" id="proj-odc">
+          <div class="project-num">05</div>
+          <img src="assets/images/orange.png" alt="Orange Digital Center" class="project-img">
+          <div class="project-title">Site Orange Digital Center</div>
+          <div class="project-tags">
+            <span class="project-tag">HTML/CSS</span>
+            <span class="project-tag">JS</span>
+            <span class="project-tag">ODC</span>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" id="proj-tiktok">
+          <div class="project-num">06</div>
+          <img src="assets/images/titktok.jpg" alt="Clone TikTok" class="project-img">
+          <div class="project-title">Clone TikTok — App Mobile</div>
+          <div class="project-tags">
+            <span class="project-tag">Ionic</span>
+            <span class="project-tag">Firebase</span>
+            <span class="project-tag">Angular</span>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ====== SERVICES ====== -->
+  <section id="services">
+    <div class="section-container">
+      <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto 1rem">
+        <span class="section-tag">Services</span>
+        <h2 class="section-title">Ce que j'offre</h2>
+        <p class="section-desc" style="margin:0 auto">
+          Des solutions complètes, pensées pour des résultats concrets et durables.
+        </p>
+      </div>
+
+      <div class="services-grid reveal">
+        <div class="service-card" id="svc-front">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="service-title">Développement Front-End</div>
+          <div class="service-desc">Interfaces modernes, responsive et accessibles avec HTML, CSS, JavaScript, Angular et Ionic.</div>
+        </div>
+
+        <div class="service-card" id="svc-back">
+          <div class="service-icon"><i class="fas fa-server"></i></div>
+          <div class="service-title">Développement Back-End</div>
+          <div class="service-desc">APIs robustes et scalables avec Java Spring Boot, PHP Laravel, Node.js et Firebase.</div>
+        </div>
+
+        <div class="service-card" id="svc-mobile">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="service-title">Applications Mobiles</div>
+          <div class="service-desc">Apps hybrides iOS et Android avec Flutter et Ionic, cross-platform et performantes.</div>
+        </div>
+
+        <div class="service-card" id="svc-design">
+          <div class="service-icon"><i class="fas fa-pen-ruler"></i></div>
+          <div class="service-title">UI/UX & Graphic Design</div>
+          <div class="service-desc">Maquettes Figma, identité visuelle, logos et design systems cohérents.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ====== CONTACT ====== -->
+  <section id="contact">
+    <div class="section-container">
+      <div class="contact-layout">
+        <!-- Left -->
+        <div class="reveal">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Travaillons<br>ensemble</h2>
+          <p class="section-desc">
+            Un projet en tête ? Une idée à concrétiser ? N'hésitez pas à me contacter, je réponds rapidement.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:camaramamady9160@gmail.com" class="contact-link" id="contact-email">
+              <span class="link-icon"><i class="fas fa-envelope"></i></span>
+              camaramamady9160@gmail.com
+            </a>
+            <a href="tel:+22391228829" class="contact-link" id="contact-phone">
+              <span class="link-icon"><i class="fas fa-phone"></i></span>
+              +223 91 22 88 29
+            </a>
+            <a href="#" class="contact-link" id="contact-location">
+              <span class="link-icon"><i class="fas fa-map-marker-alt"></i></span>
+              Bamako, Mali — Sébenikoro
+            </a>
+          </div>
+
+          <div class="social-row">
+            <a href="https://github.com/Mamdy017/Mamdy017.github.io" class="social-btn" target="_blank" rel="noopener" id="social-github">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-btn" id="social-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-btn" id="social-twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-btn" id="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-nom">Nom</label>
+                <input type="text" id="contact-nom" name="nom" placeholder="Votre nom" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-emailfield">Email</label>
+                <input type="email" id="contact-emailfield" name="email" placeholder="votre@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-sujet">Sujet</label>
+              <input type="text" id="contact-sujet" name="sujet" placeholder="Objet de votre message">
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" placeholder="Décrivez votre projet..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" id="contact-submit" style="width:100%;justify-content:center">
+              Envoyer le message <i class="fas fa-arrow-right" style="font-size:0.8em"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">
+        © 2026 <a href="#hero">Camara Mamady</a> — Tous droits réservés.
+      </p>
+      <p class="footer-copy">
+        Conçu & Développé avec ❤ à Bamako
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-top" title="Retour en haut" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script>
+  (function() {
+
+    /* ---- CURSOR ---- */
+    const cursor = document.getElementById('cursor');
+    const follower = document.getElementById('cursorFollower');
+    let mx = -100, my = -100, fx = -100, fy = -100;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.left = mx + 'px';
+      cursor.style.top  = my + 'px';
+    });
+
+    function animFollower() {
+      fx += (mx - fx) * 0.1;
+      fy += (my - fy) * 0.1;
+      follower.style.left = fx + 'px';
+      follower.style.top  = fy + 'px';
+      requestAnimationFrame(animFollower);
+    }
+    animFollower();
+
+    document.querySelectorAll('a, button, .project-card, .service-card, .contact-link, .social-btn, .category-btn').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.classList.add('active'); follower.classList.add('active'); });
+      el.addEventListener('mouseleave', () => { cursor.classList.remove('active'); follower.classList.remove('active'); });
+    });
+
+    /* ---- NAVBAR scroll ---- */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    }, { passive: true });
+
+    /* ---- MOBILE MENU ---- */
+    const toggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* ---- TYPED TEXT ---- */
+    const typed = document.getElementById('heroTyped');
+    const words = ['Développeur Full Stack', 'Architecte d\'interfaces', 'Créateur de solutions'];
+    let wi = 0, ci = 0, deleting = false;
+
+    function typeLoop() {
+      const word = words[wi];
+      if (!deleting) {
+        typed.textContent = word.slice(0, ++ci);
+        if (ci === word.length) { deleting = true; setTimeout(typeLoop, 1800); return; }
+        setTimeout(typeLoop, 80);
+      } else {
+        typed.textContent = word.slice(0, --ci);
+        if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; setTimeout(typeLoop, 400); return; }
+        setTimeout(typeLoop, 35);
+      }
+    }
+    setTimeout(typeLoop, 600);
+
+    /* ---- SCROLL REVEAL ---- */
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transitionDelay = (i % 3 * 0.1) + 's';
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => io.observe(el));
 
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+    /* ---- SKILLS TABS ---- */
+    const catBtns = document.querySelectorAll('.category-btn');
+    catBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.target;
+        // Deactivate all
+        catBtns.forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.skills-panel').forEach(p => p.classList.remove('active'));
+        // Activate selected
+        btn.classList.add('active');
+        const panel = document.getElementById('panel-' + target);
+        panel.classList.add('active');
+        // Animate bars
+        animateBarsIn(panel);
+      });
+    });
+
+    function animateBarsIn(panel) {
+      panel.querySelectorAll('.skill-bar-fill').forEach((bar, i) => {
+        bar.style.width = '0';
+        setTimeout(() => { bar.style.width = bar.dataset.width + '%'; }, i * 80);
+      });
+    }
+
+    // Animate initial frontend bars when in view
+    const skillsSection = document.getElementById('skills');
+    let skillsAnimated = false;
+    const skillsIO = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !skillsAnimated) {
+        skillsAnimated = true;
+        animateBarsIn(document.getElementById('panel-frontend'));
+      }
+    }, { threshold: 0.3 });
+    skillsIO.observe(skillsSection);
+
+    /* ---- BACK TO TOP ---- */
+    const backTop = document.getElementById('back-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) backTop.classList.add('visible');
+      else backTop.classList.remove('visible');
+    }, { passive: true });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ---- CONTACT FORM ---- */
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const btn = document.getElementById('contact-submit');
+      btn.textContent = '✓ Message envoyé !';
+      btn.style.background = 'var(--green)';
+      btn.style.boxShadow = '0 8px 24px rgba(34,197,94,0.3)';
+      setTimeout(() => {
+        btn.innerHTML = 'Envoyer le message <i class="fas fa-arrow-right" style="font-size:0.8em"></i>';
+        btn.style.background = '';
+        btn.style.boxShadow = '';
+        form.reset();
+      }, 3000);
+    });
+
+    /* ---- SMOOTH NAV LINKS ---- */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.scrollY - 72;
+          window.scrollTo({ top: y, behavior: 'smooth' });
         }
-    </script>
-    <!-- //move top -->
+      });
+    });
 
-    <!-- common jquery plugin -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <!-- //common jquery plugin -->
-
-    <!-- banner typig-text-->
-    <script>
-        const typedTextSpan = document.querySelector(".typed-text");
-        const cursorSpan = document.querySelector(".cursor");
-
-        const textArray = ["Développeur", "Full Stack"];
-        const typingDelay = 300;
-        const erasingDelay = 10;
-        const newTextDelay = 100; // Delay between current and next text
-        let textArrayIndex = 0;
-        let charIndex = 0;
-
-        function type() {
-            if (charIndex < textArray[textArrayIndex].length) {
-                if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-                charIndex++;
-                setTimeout(type, typingDelay);
-            } else {
-                cursorSpan.classList.remove("typing");
-                setTimeout(erase, newTextDelay);
-            }
-        }
-
-        function erase() {
-            if (charIndex > 0) {
-                // add class 'typing' if there's none
-                if (!cursorSpan.classList.contains("typing")) {
-                    cursorSpan.classList.add("typing");
-                }
-                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, 0);
-                charIndex--;
-                setTimeout(erase, erasingDelay);
-            } else {
-                cursorSpan.classList.remove("typing");
-                textArrayIndex++;
-                if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-                setTimeout(type, typingDelay);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
-            if (textArray.length) setTimeout(type, newTextDelay + 250);
-        });
-    </script>
-    <!-- //banner typig-text-->
-
-    <!-- libhtbox -->
-    <script src="assets/js/lightbox-plus-jquery.min.js"></script>
-    <!-- libhtbox -->
-
-    <!-- testimonials owlcarousel -->
-    <script src="assets/js/owl.carousel.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.owl-two').owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: false,
-                responsiveClass: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplaySpeed: 1000,
-                autoplayHoverPause: false,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: false
-                    },
-                    480: {
-                        items: 1,
-                        nav: false
-                    },
-                    667: {
-                        items: 1,
-                        nav: false
-                    },
-                    1000: {
-                        items: 1,
-                        nav: false
-                    }
-                }
-            })
-        })
-        const navLink = document.querySelectorAll('.active')
-
-    </script>
-
-    <!-- //script for Testimonials-->
-
-    <!-- theme switch js (light and dark)-->
-    <script src="assets/js/theme-change.js"></script>
-    <!-- //theme switch js (light and dark)-->
-
-    <!-- MENU-JS -->
-    <script>
-        $(window).on("scroll", function () {
-            var scroll = $(window).scrollTop();
-
-            if (scroll >= 80) {
-                $("#site-header").addClass("nav-fixed");
-            } else {
-                $("#site-header").removeClass("nav-fixed");
-            }
-        });
-
-        //Main navigation Active Class Add Remove
-        $(".navbar-toggler").on("click", function () {
-            $("header").toggleClass("active");
-        });
-        $(document).on("ready", function () {
-            if ($(window).width() > 991) {
-                $("header").removeClass("active");
-            }
-            $(window).on("resize", function () {
-                if ($(window).width() > 991) {
-                    $("header").removeClass("active");
-                }
-            });
-        });
-    </script>
-    <!-- //MENU-JS -->
-
-    <!-- disable body scroll which navbar is in active -->
-    <script>
-        $(function () {
-            $('.navbar-toggler').click(function () {
-                $('body').toggleClass('noscroll');
-            })
-        });
-    </script>
-    <!-- //disable body scroll which navbar is in active -->
-
-    <!-- bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- //bootstrap -->
-    <!-- //Js scripts -->
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myDIV");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-        function frontrnd() {
-            var x = document.getElementById("myFront");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-        function backend() {
-            var x = document.getElementById("myBack");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-        function framework() {
-            var x = document.getElementById("myFrame");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-        function Outils() {
-            var x = document.getElementById("myOutils");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-
-    </script>
+  })();
+  </script>
 
 </body>
-
-
-<!-- Mirrored from demo.w3layouts.com/demos_new/template_demo/28-07-2021/biodata-liberty-demo_Free/2002651968/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Dec 2022 10:02:46 GMT -->
-
 </html>
