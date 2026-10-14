@@ -3,626 +3,1263 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Camara Mamady — Architecte Backend & Développeur Full Stack</title>
-  <meta name="description" content="Camara Mamady, Architecte Backend & Développeur Full Stack basé à Bamako, Mali. Expert Java Spring Boot Security, Angular, React, Flutter, Ionic, Docker & Gestion PME.">
-  <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="3KPuzLo8Do1_TrrnPRRXeix4xNWav6iuPzVdrEFAQ1U">
+  <title>Mamady Camara — Software Developer & Systems Architect</title>
+  <meta name="description" content="Portfolio de Mamady Camara, Software Developer & Systems Architect. Expert Full Stack, Backend Java Spring Boot, Architectures Microservices, Sécurité (OAuth2/Keycloak), Flutter et Gestion PME.">
+  <meta name="keywords" content="Mamady Camara, Software Developer, Systems Architect, Spring Boot, Java, Angular, React, Flutter, MinIO, Playwright, Bamako, Mali">
+  <meta name="author" content="Mamady Camara">
   <link rel="icon" href="assets/images/Group1.png" type="image/png">
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Styles -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- Background Ambient Lights -->
+  <!-- Ambient Ambient Lighting -->
   <div class="ambient-glow-top"></div>
   <div class="ambient-glow-bottom"></div>
 
-  <!-- ====== NAVIGATION ====== -->
+  <!-- ====== NAVBAR ====== -->
   <nav id="navbar">
-    <a href="#hero" class="nav-brand">
-      Mamady<span class="nav-brand-tag">Architect</span>
-    </a>
-    <div class="nav-links-desktop">
-      <a href="#about">À propos</a>
-      <a href="#experience">Parcours</a>
-      <a href="#projects">Réalisations</a>
-      <a href="#skills">Compétences</a>
-      <a href="#contact" class="btn-nav-primary">Me Contacter</a>
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <span>Mamady</span><span class="highlight">Camara</span>
+        <span class="nav-brand-badge">Systems Architect</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">Vision</a></li>
+        <li><a href="#skills">Stack</a></li>
+        <li><a href="#experience">Parcours</a></li>
+        <li><a href="#projects">Réalisations</a></li>
+        <li><a href="#education">Formations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary" style="padding: 0.55rem 1.25rem; font-size: 0.85rem;">
+          <i class="fas fa-paper-plane"></i> Me Contacter
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu Mobile">
-      <span></span><span></span><span></span>
-    </button>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu" style="display:none;position:fixed;inset:0;background:rgba(9,13,22,0.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2rem">
-    <a href="#about" class="mobile-link" style="font-size:1.8rem;font-weight:700">À propos</a>
-    <a href="#experience" class="mobile-link" style="font-size:1.8rem;font-weight:700">Parcours</a>
-    <a href="#projects" class="mobile-link" style="font-size:1.8rem;font-weight:700">Réalisations</a>
-    <a href="#skills" class="mobile-link" style="font-size:1.8rem;font-weight:700">Compétences</a>
-    <a href="#contact" class="mobile-link btn-indigo-solid" style="padding:0.8rem 2rem">Me Contacter</a>
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="#about" class="mob-link">Vision & Profil</a></li>
+      <li><a href="#skills" class="mob-link">Stack Technique</a></li>
+      <li><a href="#experience" class="mob-link">Expériences Professionnelles</a></li>
+      <li><a href="#projects" class="mob-link">Réalisations Notables</a></li>
+      <li><a href="#education" class="mob-link">Diplômes & Certifications</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+      <li>
+        <a href="assets/images/Moncv.pdf" download class="btn btn-primary" style="display:inline-flex; margin-top:0.5rem; justify-content:center;">
+          <i class="fas fa-download"></i> Télécharger CV
+        </a>
+      </li>
+    </ul>
   </div>
 
   <!-- ====== HERO SECTION ====== -->
-  <section id="hero">
-    <div class="hero-layout">
-      <!-- Left Info -->
-      <div>
-        <div class="badge-status">
-          <span class="status-dot-emerald"></span>
-          Architecte Backend & Lead Full Stack · Bamako, Mali
-        </div>
-
-        <h1 class="hero-title-bold">
-          Camara <span class="highlight-indigo">Mamady</span><br>
-          Engineering & Innovation.
-        </h1>
-
-        <div class="hero-typed-text" id="heroTyped"></div>
-
-        <p class="hero-description">
-          Développeur et architecte système polyvalent, passionné par la création de solutions web et mobiles innovantes. 
-          Alliant une solide expertise technique <strong>Full Stack</strong> à une vision stratégique en gestion <strong>(Licence PME)</strong>, 
-          je transforme les défis métier en infrastructures technologiques performantes.
-        </p>
-
-        <div class="hero-btn-group">
-          <a href="#projects" class="btn-indigo-solid">
-            Voir mes réalisations <i class="fas fa-arrow-right"></i>
-          </a>
-          <a href="assets/images/Moncv.pdf" download class="btn-slate-outline">
-            <i class="fas fa-download"></i> Télécharger CV
-          </a>
-          <a href="#contact" class="btn-slate-outline">
-            <i class="fas fa-envelope"></i> Me contacter
-          </a>
-        </div>
-      </div>
-
-      <!-- Right Card Frame -->
-      <div>
-        <div class="hero-card-frame">
-          <div class="hero-img-box">
-            <img src="assets/images/IMG_8340.jpeg" alt="Photo de Camara Mamady">
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge badge-live">
+            Disponible pour nouveaux défis techniques & d architecture
           </div>
-          <div class="hero-card-details">
-            <div>
-              <div class="hero-card-name">Camara Mamady</div>
-              <div class="hero-card-role">Full Stack & System Architect</div>
-            </div>
-            <a href="#contact" class="btn-indigo-solid" style="padding:0.5rem 1rem;font-size:0.8rem">
-              <i class="fas fa-paper-plane"></i> Contact
+
+          <h1>
+            Mamady <span class="gradient-text">Camara</span><br>
+            Software Developer &amp; Systems Architect
+          </h1>
+
+          <div class="hero-subtitle-tag">
+            <span id="typedText"></span><span style="animation: blink 1s infinite;">_</span>
+          </div>
+
+          <p class="hero-desc">
+            Développeur et architecte système polyvalent, passionné par la création de solutions web et mobiles innovantes à <strong>haute valeur ajoutée</strong>. Alliant une solide expertise technique <strong>Full Stack et Backend</strong> à une vision stratégique en gestion <strong>(Licence en Gestion des PME)</strong>, je conçois des architectures robustes, scalables et sécurisées, transformant les défis métiers complexes en infrastructures technologiques performantes.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-cubes"></i> Explorer mes réalisations
+            </a>
+            <a href="assets/images/Moncv.pdf" download class="btn btn-outline">
+              <i class="fas fa-file-arrow-down"></i> Télécharger mon CV
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> Me contacter
             </a>
           </div>
+
+          <div class="hero-quick-meta">
+            <div class="meta-item">
+              <i class="fas fa-location-dot"></i>
+              <span>Sebenikoro, Bamako, Mali</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-layer-group"></i>
+              <span>Backend &amp; Cloud Architect</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-shield-halved"></i>
+              <span>Sécurité &amp; Drools</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="avatar-wrapper">
+              <img src="assets/images/IMG_8340.jpeg" alt="Mamady Camara" class="avatar-img">
+              <div class="avatar-badge" title="Actif">
+                <i class="fas fa-check"></i>
+              </div>
+            </div>
+
+            <div class="profile-name">Mamady Camara</div>
+            <div class="profile-title">Software Developer &amp; Systems Architect</div>
+
+            <div class="profile-stats-row">
+              <div class="stat-item">
+                <div class="num">15+</div>
+                <div class="lbl">Systèmes &amp; Apps Livrées</div>
+              </div>
+              <div class="stat-item">
+                <div class="num">4+ Ans</div>
+                <div class="lbl">Expertise Technique</div>
+              </div>
+            </div>
+
+            <div class="profile-tags">
+              <span class="tag-pill">Java / Spring Boot</span>
+              <span class="tag-pill">OAuth2 / Keycloak</span>
+              <span class="tag-pill">MinIO &amp; Kafka</span>
+              <span class="tag-pill">Flutter / Mobile</span>
+              <span class="tag-pill">Licence PME</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== METRICS STRIP ====== -->
-  <div class="metrics-grid-3">
-    <div class="metric-item">
-      <div class="metric-icon-box"><i class="fas fa-rocket"></i></div>
-      <div>
-        <div class="metric-val">15+</div>
-        <div class="metric-lbl">Architectures & Apps Métier Livrées</div>
-      </div>
-    </div>
-    <div class="metric-item">
-      <div class="metric-icon-box"><i class="fas fa-code"></i></div>
-      <div>
-        <div class="metric-val">4+ Ans</div>
-        <div class="metric-lbl">Expérience Full Stack & DevOps</div>
-      </div>
-    </div>
-    <div class="metric-item">
-      <div class="metric-icon-box"><i class="fas fa-graduation-cap"></i></div>
-      <div>
-        <div class="metric-val">Double</div>
-        <div class="metric-lbl">Licence Génie Logiciel + Licence PME</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ====== ABOUT & DUAL DEGREE ====== -->
-  <section id="about">
-    <div class="section-head">
-      <span class="tag-subtitle">Vision globale</span>
-      <h2 class="title-section-main">Ingénierie Logicielle & Alignement Métier</h2>
-      <p class="desc-section-main">
-        Une combinaison unique d'expertise technique backend et de gouvernance de projet.
-      </p>
-    </div>
-
-    <div class="about-dual-grid">
-      <div class="about-card-luxe">
-        <div class="about-card-header">
-          <div class="about-card-icon"><i class="fas fa-server"></i></div>
-          <div>
-            <div class="about-card-title">Génie Logiciel & Architecture</div>
-            <div class="about-card-sub">INTEC-SUP · Licence & DUT</div>
-          </div>
-        </div>
-        <p class="about-card-text">
-          Conception d'architectures backend robustes et sécurisées sous Java Spring Boot, Spring Security, microservices, APIs REST et dashboards avec graphiques SVG optimisés.
+  <!-- ====== SECTION 1: VISION STRATÉGIQUE & PROFIL ====== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">1. Profil Professionnel &amp; Vision Stratégique</span>
+        <h2 class="section-title">Synergie Entre Ingénierie &amp; Pilotage Stratégique</h2>
+        <p class="section-desc">
+          Une double compétence distinctive permettant d aligner rigueur algorithmique, robustesse des systèmes et retour sur investissement opérationnel.
         </p>
       </div>
 
-      <div class="about-card-luxe">
-        <div class="about-card-header">
-          <div class="about-card-icon"><i class="fas fa-chart-pie"></i></div>
-          <div>
-            <div class="about-card-title">Gestion des PME & Stratégie</div>
-            <div class="about-card-sub">FSEG Bamako · Licence PME</div>
+      <div class="vision-grid">
+        <div class="vision-card">
+          <div class="vision-icon">
+            <i class="fas fa-server"></i>
           </div>
+          <h3>Architectures Avancées &amp; Génie Logiciel</h3>
+          <div class="vision-sub">INTEC-SUP — Licence en Génie Logiciel &amp; DUT</div>
+          <p>
+            Conception et orchestration d architectures distribuées, microservices et APIs REST/GraphQL à haute tolérance de panne. Implémentation de patterns modernes (SOLID, Clean Architecture), sécurisation fine (OAuth2, Keycloak, JWT) et mécanismes de décision complexes avec moteurs de règles métier (Drools).
+          </p>
         </div>
-        <p class="about-card-text">
-          Compréhension approfondie de la gestion d'entreprise et des contraintes opérationnelles pour concevoir des outils numériques apportant un réel ROI.
+
+        <div class="vision-card">
+          <div class="vision-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Stratégie d Entreprise &amp; Gestion des PME</h3>
+          <div class="vision-sub">FSEG Bamako — Licence en Gestion des PME</div>
+          <p>
+            Analyse des chaînes de valeur, modélisation des flux financiers et administratifs pour concevoir des produits qui répondent directement aux indicateurs de performance clés (KPIs) des entreprises, optimisent les processus de gestion et automatisent les tâches à fort coût humain.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION 2: STACK TECHNIQUE COMPLÈTE ====== -->
+  <section class="section" id="skills" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">2. Expertises Techniques &amp; Stack Complète</span>
+        <h2 class="section-title">Technologies, Frameworks &amp; Systèmes Maîtrisés</h2>
+        <p class="section-desc">
+          Sélectionnez un domaine pour explorer les outils, langages et bibliothèques utilisés au quotidien en production.
         </p>
       </div>
+
+      <div class="skills-tabs">
+        <button class="skill-tab-btn active" data-tab="backend">
+          <i class="fas fa-microchip"></i> Backend &amp; Architecture
+        </button>
+        <button class="skill-tab-btn" data-tab="frontend">
+          <i class="fas fa-laptop-code"></i> Frontend, Mobile &amp; Test
+        </button>
+        <button class="skill-tab-btn" data-tab="devops">
+          <i class="fas fa-cloud"></i> DevOps, Cloud &amp; Systèmes
+        </button>
+        <button class="skill-tab-btn" data-tab="storage">
+          <i class="fas fa-database"></i> SGBD, Stockage &amp; Déploiement
+        </button>
+      </div>
+
+      <!-- Tab 1: Backend, Sécurité & Architecture -->
+      <div class="skills-content-group active" id="tab-backend">
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-java"></i> Java &amp; Spring Boot</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">Spring Boot, Spring MVC, Spring Data, Spring Security, Microservices.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-brain"></i> Moteur de Règles Drools</span>
+            <span class="skill-level-badge">Expert</span>
+          </div>
+          <p class="skill-desc">Logique décisionnelle dynamique, scoring financier, découplage des règles métier.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-lock"></i> Sécurité &amp; Authentification</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">OAuth2, Keycloak, JWT, Spring Security, politiques de contrôle d accès RBAC.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-php"></i> PHP &amp; Laravel</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">Architecture MVC, Laravel Blade, API RESTful, interfaçages complexes.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-node-js"></i> Node.js &amp; NestJS</span>
+            <span class="skill-level-badge">Opérationnel</span>
+          </div>
+          <p class="skill-desc">Backend TypeScript, Express, NestJS modulaire, microservices asynchrones.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-python"></i> Python &amp; Data Logic</span>
+            <span class="skill-level-badge">Certifié</span>
+          </div>
+          <p class="skill-desc">Scripts d automatisation, traitement de flux de données, algorithms.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-network-wired"></i> APIs REST &amp; GraphQL</span>
+            <span class="skill-level-badge">Conception</span>
+          </div>
+          <p class="skill-desc">Conception OpenAPI/Swagger, refactoring d endpoints, limitation de charge, caching.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-bolt"></i> Temps Réel &amp; WebSockets</span>
+            <span class="skill-level-badge">Opérationnel</span>
+          </div>
+          <p class="skill-desc">WebSockets duplex, flux de scores en direct, alertes instantanées.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-envelope-open-text"></i> Apache Kafka &amp; OneSignal</span>
+            <span class="skill-level-badge">Opérationnel</span>
+          </div>
+          <p class="skill-desc">Broker de messages événementiels, notifications push multiplateformes.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-wordpress"></i> WordPress &amp; Headless CMS</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">Thèmes et plugins sur-mesure, REST API, webhooks d interconnexion mobile.</p>
+        </div>
+      </div>
+
+      <!-- Tab 2: Frontend, Mobile & Test -->
+      <div class="skills-content-group" id="tab-frontend">
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-react"></i> React.js &amp; Next.js</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">SSR, composants modulaires, Redux Toolkit, performance rendering.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-angular"></i> Angular &amp; Ionic</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">TypeScript strict, RxJS, services réactifs, applications cross-platform.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-vuejs"></i> Vue.js &amp; Pinia</span>
+            <span class="skill-level-badge">Opérationnel</span>
+          </div>
+          <p class="skill-desc">Composition API, gestion d état réactive, architecture dashboard.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-mobile-screen-button"></i> Flutter (Dart)</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">Développement Android &amp; iOS unifié, interconnexion API REST/CMS, stores publication.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-vial-circle-check"></i> Playwright &amp; QA Tests</span>
+            <span class="skill-level-badge">Pratique</span>
+          </div>
+          <p class="skill-desc">Tests E2E automatisés, validation de flux critiques, scénarios de régression.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-palette"></i> Tailwind CSS &amp; SASS</span>
+            <span class="skill-level-badge">Expert</span>
+          </div>
+          <p class="skill-desc">Design systems, dark modes, animations fluides, responsive design avancé.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-bezier-curve"></i> SVG Dynamiques &amp; Cartes</span>
+            <span class="skill-level-badge">Sur-mesure</span>
+          </div>
+          <p class="skill-desc">Dashboards maritimes et logistiques avec rendu vectoriel interactif optimisé.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-figma"></i> Figma &amp; UI/UX</span>
+            <span class="skill-level-badge">Conception</span>
+          </div>
+          <p class="skill-desc">Prototypage interactif, wireframes, alignement ergonomie utilisateur.</p>
+        </div>
+      </div>
+
+      <!-- Tab 3: DevOps, Cloud & Systèmes -->
+      <div class="skills-content-group" id="tab-devops">
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-docker"></i> Docker &amp; Conteneurs</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">Dockerfiles multi-stage, docker-compose, isolation des environnements.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+            <span class="skill-level-badge">Orchestration</span>
+          </div>
+          <p class="skill-desc">Déploiement de pods, services, ingresses et gestion des configurations.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-infinity"></i> CI/CD Pipelines</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">GitLab CI, Jenkins, Azure DevOps, automatisation build, test et release.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-linux"></i> Linux &amp; Custom Wayland</span>
+            <span class="skill-level-badge">Quotidien</span>
+          </div>
+          <p class="skill-desc">Arch Linux, Debian, Parrot OS, Hyprland, Niri, shell scripting Zsh.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-git-alt"></i> Git, GitHub &amp; GitLab</span>
+            <span class="skill-level-badge">Maîtrise</span>
+          </div>
+          <p class="skill-desc">Git flow, code reviews, branches protégées, gestion des conflits.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-users-gear"></i> Outils &amp; Agilité</span>
+            <span class="skill-level-badge">Pratique</span>
+          </div>
+          <p class="skill-desc">Postman, JIRA, Confluence, Trello, méthodologies Agile Scrum.</p>
+        </div>
+      </div>
+
+      <!-- Tab 4: SGBD, Stockage Objet & Déploiement -->
+      <div class="skills-content-group" id="tab-storage">
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-hard-drive"></i> MinIO Object Storage</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">Stockage objet S3-compatible auto-hébergé, gestion documentaire sécurisée.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-database"></i> PostgreSQL &amp; MySQL</span>
+            <span class="skill-level-badge">Expert</span>
+          </div>
+          <p class="skill-desc">Modélisation relationnelle avancée, indexation, procédures, optimisation de requêtes.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-server"></i> Oracle SQL &amp; SQL Server</span>
+            <span class="skill-level-badge">Opérationnel</span>
+          </div>
+          <p class="skill-desc">Bases de données d entreprise, intégrité référentielle, transactions ACID.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-cubes-stacked"></i> Prisma ORM</span>
+            <span class="skill-level-badge">Opérationnel</span>
+          </div>
+          <p class="skill-desc">Schémas typés, migrations automatisées, requêtage performant.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-fire"></i> Firebase Firestore</span>
+            <span class="skill-level-badge">Avancé</span>
+          </div>
+          <p class="skill-desc">Bases NoSQL temps réel, Cloud Functions, Authentication, Push Cloud Messaging.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fas fa-cloud-arrow-up"></i> PaaS &amp; VPS Hosting</span>
+            <span class="skill-level-badge">Production</span>
+          </div>
+          <p class="skill-desc">Hostinger VPS, Vercel, Render, configuration Nginx, SSL Let s Encrypt, DNS.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <span class="skill-name"><i class="fab fa-google-play"></i> Stores Mobiles</span>
+            <span class="skill-level-badge">Publication</span>
+          </div>
+          <p class="skill-desc">Google Play Console &amp; Apple App Store Connect (ex: Kibaru Sports).</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ====== PROJECTS GRID (STRUCTURED 2-COLUMN) ====== -->
-  <section id="projects">
-    <div class="section-head">
-      <span class="tag-subtitle">Portfolio</span>
-      <h2 class="title-section-main">Réalisations & Projets Métier</h2>
-      <p class="desc-section-main">
-        Une sélection ordonnée de mes projets majeurs développés en entreprise et en formation.
-      </p>
-    </div>
-
-    <div class="projects-clean-grid">
-      <!-- Project 1: Seto -->
-      <div class="project-item-card">
-        <a href="seto.html" class="project-cover-container" style="display:block;text-decoration:none">
-          <img src="assets/images/seto.png" alt="Seto Maritime Dashboard">
-          <span class="project-company-badge">BrandOpera · 2025</span>
-        </a>
-        <div class="project-content-body">
-          <h3 class="project-title-text"><a href="seto.html" style="color:inherit;text-decoration:none">Seto — Logistique & Maritime</a></h3>
-          <p class="project-description-text">
-            Architecte & Lead UI : Conception de l'architecture globale et développement de dashboards logistiques maritimes sur-mesure avec visualisations SVG optimisées.
-          </p>
-          <div class="project-tech-pills" style="margin-bottom:1rem">
-            <span class="tech-pill">Architecte Backend</span>
-            <span class="tech-pill">Lead UI</span>
-            <span class="tech-pill">SVG Optimisé</span>
-            <span class="tech-pill">Logistique</span>
-          </div>
-          <a href="seto.html" class="btn-indigo-solid" style="padding:0.5rem 1rem;font-size:0.8rem;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem">
-            Explorer le Dashboard Seto <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
+  <!-- ====== SECTION 5: EXPÉRIENCES PROFESSIONNELLES ====== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">5. Expériences Professionnelles</span>
+        <h2 class="section-title">Parcours en Entreprise &amp; Réalisations Métier</h2>
+        <p class="section-desc">
+          Conception d architectures, direction technique et déploiements en environnement de production exigeant.
+        </p>
       </div>
 
-      <!-- Project 2: Deme -->
-      <div class="project-item-card">
-        <div class="project-cover-container">
-          <img src="assets/images/deme.png" alt="Deme Crowdfunding">
-          <span class="project-company-badge">BrandOpera · 2025</span>
-        </div>
-        <div class="project-content-body">
-          <h3 class="project-title-text">Deme — Cagnotte en Ligne</h3>
-          <p class="project-description-text">
-            Full Stack Dev : Développement intégral des dashboards Admin & RSE, conception Backend avec Spring Boot Security, tests QA et pagination de données.
-          </p>
-          <div class="project-tech-pills">
-            <span class="tech-pill">Spring Boot Security</span>
-            <span class="tech-pill">Dashboard RSE</span>
-            <span class="tech-pill">Admin Panel</span>
-            <span class="tech-pill">QA Tests</span>
+      <div class="timeline">
+        <!-- Expérience 1: BrandOpera -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Développeur Full Stack &amp; Architecte Backend</div>
+                <div class="timeline-company"><i class="fas fa-building"></i> BrandOpera</div>
+              </div>
+              <span class="timeline-period">2025 — Présent</span>
+            </div>
+
+            <div class="timeline-projects">
+              <div class="timeline-proj-item">
+                <div class="timeline-proj-title">
+                  <span>Seto — Logistique &amp; Maritime</span>
+                  <span class="timeline-proj-badge">Architecte &amp; Lead UI</span>
+                </div>
+                <div class="timeline-proj-desc">
+                  Conception de l architecture logicielle et développement de tableaux de bord logistiques sur-mesure pour le secteur maritime avec intégration de cartes dynamiques vectorielles et SVG optimisés.
+                </div>
+              </div>
+
+              <div class="timeline-proj-item">
+                <div class="timeline-proj-title">
+                  <span>Deme — Cagnotte en Ligne &amp; RSE</span>
+                  <span class="timeline-proj-badge">Full Stack &amp; Sécurité</span>
+                </div>
+                <div class="timeline-proj-desc">
+                  Développement Full Stack intégral des tableaux de bord Admin et RSE, conception Backend Spring Boot, sécurisation applicative renforcée (OAuth2, Keycloak, JWT), stockage documentaire MinIO, stratégie de pagination et cache, tests d automatisation Playwright &amp; QA.
+                </div>
+              </div>
+
+              <div class="timeline-proj-item">
+                <div class="timeline-proj-title">
+                  <span>Gama-Protect — Gestion de Ronde &amp; Sécurité</span>
+                  <span class="timeline-proj-badge">Multiplateforme &amp; API</span>
+                </div>
+                <div class="timeline-proj-desc">
+                  Conception de la solution globale (Backend, Web Frontend, Mobile), refactoring approfondi des endpoints API REST et sécurisation rigoureuse des accès aux données sensibles.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Project 3: Sossara -->
-      <div class="project-item-card">
-        <div class="project-cover-container">
-          <img src="assets/images/sossara.png" alt="Sossara Real Estate">
-          <span class="project-company-badge">African Wealths Dev · 2023-2025</span>
-        </div>
-        <div class="project-content-body">
-          <h3 class="project-title-text">Sossara — Gestion Immobilière</h3>
-          <p class="project-description-text">
-            Développeur principal sur la plateforme de gestion immobilière centralisant le suivi des baux, demandes de maintenance et la comptabilité.
-          </p>
-          <div class="project-tech-pills">
-            <span class="tech-pill">React</span>
-            <span class="tech-pill">Next.js</span>
-            <span class="tech-pill">Spring Boot</span>
-            <span class="tech-pill">MySQL</span>
+        <!-- Expérience 2: African Wealths Development -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Développeur Principal / Full Stack</div>
+                <div class="timeline-company"><i class="fas fa-building"></i> African Wealths Development</div>
+              </div>
+              <span class="timeline-period">2023 — 2025</span>
+            </div>
+
+            <div class="timeline-projects">
+              <div class="timeline-proj-item">
+                <div class="timeline-proj-title">
+                  <span>Sossara — Plateforme Immobilière</span>
+                  <span class="timeline-proj-badge">Pilotage &amp; Full Stack</span>
+                </div>
+                <div class="timeline-proj-desc">
+                  Pilotage du développement technique, modélisation des flux financiers et administratifs pour automatiser la gestion multi-biens, baux et transactions.
+                </div>
+              </div>
+
+              <div class="timeline-proj-item">
+                <div class="timeline-proj-title">
+                  <span>WealthMentor — Recommandation Bancaire</span>
+                  <span class="timeline-proj-badge">Architecture &amp; Drools</span>
+                </div>
+                <div class="timeline-proj-desc">
+                  Architecture et réalisation de la plateforme fintech. Implémentation d un moteur de règles métier dynamique (type Drools) pour formaliser et appliquer les règles d aide à la décision financière, authentification sécurisée, gestion des documents avec MinIO et flux WebSockets temps réel.
+                </div>
+              </div>
+
+              <div class="timeline-proj-item">
+                <div class="timeline-proj-title">
+                  <span>Kibaru Sports — Application Mobile d Information Sportive</span>
+                  <span class="timeline-proj-badge">Mobile Multi-Stores</span>
+                </div>
+                <div class="timeline-proj-desc">
+                  Développement principal de l application sportive en temps réel, couplée à des notifications push intelligentes via OneSignal et déploiement officiel sur Google Play Store et Apple App Store.
+                </div>
+              </div>
+
+              <div class="timeline-proj-item">
+                <div class="timeline-proj-title">
+                  <span>Solutions Métier : GMAO &amp; Gestion de Pressing</span>
+                  <span class="timeline-proj-badge">Solutions PME</span>
+                </div>
+                <div class="timeline-proj-desc">
+                  Conception de solutions complètes de GMAO pour la maintenance assistée de parcs automobiles et logiciels de gestion sur-mesure pour établissements de pressing.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Project 4: DevsCiwara -->
-      <div class="project-item-card">
-        <div class="project-cover-container">
-          <img src="assets/images/devsciwara.png" alt="DevsCiwara Coding Platform">
-          <span class="project-company-badge">Challenge Dev · 2023</span>
-        </div>
-        <div class="project-content-body">
-          <h3 class="project-title-text">DevsCiwara — Challenge Développeurs</h3>
-          <p class="project-description-text">
-            Plateforme complète permettant d'organiser des compétitions de codage, suivre la progression en temps réel et gérer les classements.
-          </p>
-          <div class="project-tech-pills">
-            <span class="tech-pill">Spring Boot</span>
-            <span class="tech-pill">Ionic</span>
-            <span class="tech-pill">Angular</span>
-            <span class="tech-pill">Real-Time</span>
-          </div>
-        </div>
-      </div>
+        <!-- Expérience 3: Orange Digital Center & Simplon -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <div class="timeline-role">Développeur Lead &amp; Projets Notables</div>
+                <div class="timeline-company"><i class="fas fa-building"></i> Orange Digital Center (ODC) &amp; DevsCiwara</div>
+              </div>
+              <span class="timeline-period">2022 — 2023</span>
+            </div>
 
-      <!-- Project 5: WealthMentor -->
-      <div class="project-item-card">
-        <div class="project-cover-container">
-          <img src="assets/images/wealthmentor.png" alt="WealthMentor App">
-          <span class="project-company-badge">African Wealths Dev</span>
-        </div>
-        <div class="project-content-body">
-          <h3 class="project-title-text">WealthMentor — Recommandation Bancaire</h3>
-          <p class="project-description-text">
-            Application mobile fintech de conseil d'investissement et recommandation bancaire personnalisée.
-          </p>
-          <div class="project-tech-pills">
-            <span class="tech-pill">Flutter</span>
-            <span class="tech-pill">Firebase</span>
-            <span class="tech-pill">Fintech</span>
-            <span class="tech-pill">Mobile</span>
-          </div>
-        </div>
-      </div>
+            <div class="timeline-projects">
+              <div class="timeline-proj-item">
+                <div class="timeline-proj-title">
+                  <span>DevsCiwara — Plateforme d Apprentissage &amp; Compétitions de Code</span>
+                  <span class="timeline-proj-badge">Temps Réel &amp; Full Stack</span>
+                </div>
+                <div class="timeline-proj-desc">
+                  Plateforme pour compétitions de programmation (Spring Boot, Angular, Ionic) intégrant messagerie instantanée, push notifications et tableaux de classement en direct.
+                </div>
+              </div>
 
-      <!-- Project 6: GMAO Flotte -->
-      <div class="project-item-card">
-        <div class="project-cover-container">
-          <img src="assets/images/gmao.png" alt="GMAO Flotte">
-          <span class="project-company-badge">African Wealths Dev</span>
-        </div>
-        <div class="project-content-body">
-          <h3 class="project-title-text">GMAO — Maintenance & Gestion de Flotte</h3>
-          <p class="project-description-text">
-            Application de gestion de maintenance assistée par ordinateur et suivi de parc automobile en temps réel.
-          </p>
-          <div class="project-tech-pills">
-            <span class="tech-pill">Spring Boot</span>
-            <span class="tech-pill">Angular</span>
-            <span class="tech-pill">MySQL</span>
-            <span class="tech-pill">Flotte</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 7: ERP -->
-      <div class="project-item-card">
-        <div class="project-cover-container">
-          <img src="assets/images/ERP.jpg" alt="ERP Enterprise Resource Planning">
-          <span class="project-company-badge">Orange Digital Center</span>
-        </div>
-        <div class="project-content-body">
-          <h3 class="project-title-text">ERP — Enterprise Resource Planning</h3>
-          <p class="project-description-text">
-            Solution globale collaborative développée en équipe pour la gestion intégrale d'une structure d'entreprise.
-          </p>
-          <div class="project-tech-pills">
-            <span class="tech-pill">Spring Boot</span>
-            <span class="tech-pill">Angular</span>
-            <span class="tech-pill">Ionic</span>
-            <span class="tech-pill">ODC</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 8: Location & Vente de Véhicules -->
-      <div class="project-item-card">
-        <div class="project-cover-container">
-          <img src="assets/images/vehicule.png" alt="Location Vente Véhicules">
-          <span class="project-company-badge">E-Commerce Automobile</span>
-        </div>
-        <div class="project-content-body">
-          <h3 class="project-title-text">Location & Vente de Véhicules</h3>
-          <p class="project-description-text">
-            Plateforme web dynamique permettant de réserver, louer ou acheter des véhicules en ligne avec paiement sécurisé.
-          </p>
-          <div class="project-tech-pills">
-            <span class="tech-pill">PHP / MySQL</span>
-            <span class="tech-pill">Bootstrap</span>
-            <span class="tech-pill">Paiement Sécurisé</span>
+              <div class="timeline-proj-item">
+                <div class="timeline-proj-title">
+                  <span>ERP Entreprise — Gestion Intégrée</span>
+                  <span class="timeline-proj-badge">Modélisation d Entreprise</span>
+                </div>
+                <div class="timeline-proj-desc">
+                  Modélisation globale et développement complet d un progiciel de gestion intégré (ERP) au sein du programme d accélération Orange Digital Center.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== TIMELINE EXPERIENCES ====== -->
-  <section id="experience">
-    <div class="section-head">
-      <span class="tag-subtitle">Parcours</span>
-      <h2 class="title-section-main">Expériences Professionnelles</h2>
-    </div>
-
-    <div class="timeline-structured">
-      <!-- BrandOpera -->
-      <div class="timeline-row">
-        <div class="timeline-node-circle"></div>
-        <div class="timeline-content-card">
-          <span class="timeline-date-pill">2025 — Présent</span>
-          <h3 class="timeline-job-title">Développeur Full Stack & Architecte Backend</h3>
-          <div class="timeline-job-company">BrandOpera</div>
-          <div class="timeline-bullet-points">
-            <p>• <strong>Seto (Logistique & Maritime)</strong> | <em>Architecte & Lead UI</em> : Architecture et dashboards logistiques sur-mesure (SVG optimisé).</p>
-            <p>• <strong>Deme (Cagnotte en Ligne)</strong> | <em>Full Stack Dev</em> : Dashboards Admin & RSE, Backend Spring Boot Security, tests QA et pagination RSE.</p>
-            <p>• <strong>Gama Protect (Sécurité / Admin)</strong> | <em>Full Stack Dev</em> : Optimisation des endpoints API REST et sécurisation des accès.</p>
-          </div>
-        </div>
+  <!-- ====== SECTION 6: PROJETS & RÉALISATIONS NOTABLES ====== -->
+  <section class="section" id="projects" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">6. Projets &amp; Réalisations Notables</span>
+        <h2 class="section-title">Infrastructures &amp; Applications Conçues</h2>
+        <p class="section-desc">
+          Une sélection de projets applicatifs illustrant la maîtrise de stacks variées, du dashboard logistique aux moteurs de scoring.
+        </p>
       </div>
 
-      <!-- African Wealths Dev -->
-      <div class="timeline-row">
-        <div class="timeline-node-circle"></div>
-        <div class="timeline-content-card">
-          <span class="timeline-date-pill">2023 — 2025</span>
-          <h3 class="timeline-job-title">Développeur Full Stack & DevOps</h3>
-          <div class="timeline-job-company">AFRICAN WEALTHS DEVELOPMENT</div>
-          <div class="timeline-bullet-points">
-            <p>• <strong>Sossara</strong> : Développeur principal sur la plateforme de gestion immobilière.</p>
-            <p>• <strong>Apps Métiers</strong> : Conception de WealthMentor (recommandation bancaire), Kibaru Sports, GMAO de flotte et pressing.</p>
-            <p>• <strong>DevOps</strong> : Industrialisation et déploiement continu via Docker, Vercel et Azure DevOps.</p>
+      <div class="projects-grid">
+        <!-- Projet 1: Seto -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/images/seto.png" alt="Seto Logistics Maritime Dashboard">
+            <span class="project-tag-badge">Logistique &amp; Maritime</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Seto — Logistique Maritime</div>
+            <div class="project-client">BrandOpera · 2025</div>
+            <p class="project-desc">
+              Tableaux de bord logistiques sur-mesure dédiés à la flotte maritime, intégration de visualisations cartographiques et rendus SVG hautement optimisés.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">Architecte Backend</span>
+              <span class="stack-pill">Lead UI</span>
+              <span class="stack-pill">SVG Maps</span>
+              <span class="stack-pill">REST API</span>
+            </div>
+            <div class="project-footer">
+              <a href="seto.html" class="project-link">
+                Explorer le Dashboard <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- ODC & DevsCiwara -->
-      <div class="timeline-row">
-        <div class="timeline-node-circle"></div>
-        <div class="timeline-content-card">
-          <span class="timeline-date-pill">2022 — 2023</span>
-          <h3 class="timeline-job-title">Développeur Lead & Formation ODC</h3>
-          <div class="timeline-job-company">Orange Digital Center & DevsCiwara</div>
-          <div class="timeline-bullet-points">
-            <p>• <strong>DevsCiwara</strong> : Plateforme de compétition de codage en temps réel.</p>
-            <p>• <strong>Orange Digital Center</strong> : Formation Full Stack certifiante et développement de l'ERP collaboratif.</p>
+        <!-- Projet 2: Deme -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/images/deme.png" alt="Deme Crowdfunding RSE">
+            <span class="project-tag-badge">Fintech &amp; RSE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Deme — Cagnotte en Ligne</div>
+            <div class="project-client">BrandOpera · 2025</div>
+            <p class="project-desc">
+              Développement intégral des dashboards d administration et RSE. Sécurité Spring Boot avec OAuth2/Keycloak, MinIO pour le stockage des pièces et tests Playwright.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">Spring Boot</span>
+              <span class="stack-pill">OAuth2 / Keycloak</span>
+              <span class="stack-pill">MinIO</span>
+              <span class="stack-pill">Playwright</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-client" style="margin:0;">Système Sécurisé</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 3: Gama-Protect -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/images/blog5.jpg" alt="Gama Protect Securité">
+            <span class="project-tag-badge">Sécurité Physique</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Gama-Protect — Rondes &amp; Sécurité</div>
+            <div class="project-client">BrandOpera · 2025</div>
+            <p class="project-desc">
+              Plateforme unifiée (Backend, Web, Mobile) pour la gestion et la surveillance des rondes de sécurité en temps réel avec refactoring d API REST et contrôle des accès.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">Backend REST</span>
+              <span class="stack-pill">Mobile</span>
+              <span class="stack-pill">Auth Sécurisée</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-client" style="margin:0;">Multiplateforme</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 4: Sossara -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/images/sossara.png" alt="Sossara Immobilier">
+            <span class="project-tag-badge">PropTech</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Sossara — Gestion Immobilière</div>
+            <div class="project-client">African Wealths Development</div>
+            <p class="project-desc">
+              Automatisation complète de la gestion multi-biens immobiliers, modélisation des transactions financières, suivi des contrats de location et maintenance.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">Spring Boot</span>
+              <span class="stack-pill">React.js</span>
+              <span class="stack-pill">MySQL</span>
+              <span class="stack-pill">Flux Financiers</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-client" style="margin:0;">Gestion Immobilière</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 5: WealthMentor -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/images/wealthmentor.png" alt="WealthMentor Bancaire">
+            <span class="project-tag-badge">Banque &amp; Décision</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">WealthMentor — Décision Bancaire</div>
+            <div class="project-client">African Wealths Development</div>
+            <p class="project-desc">
+              Plateforme d aide à la décision financière et d investissement bancaire avec moteur de règles métier dynamique (Drools), gestion MinIO et flux WebSockets.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">Drools Engine</span>
+              <span class="stack-pill">WebSockets</span>
+              <span class="stack-pill">MinIO</span>
+              <span class="stack-pill">Flutter</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-client" style="margin:0;">Moteur Décisionnel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 6: Kibaru Sports -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/images/card.jpg" alt="Kibaru Sports Mobile App">
+            <span class="project-tag-badge">Mobile Multi-Stores</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Kibaru Sports — Actualités Live</div>
+            <div class="project-client">African Wealths Development</div>
+            <p class="project-desc">
+              Application mobile sportive à fort trafic avec résultats et scores en direct, alertes push ciblées OneSignal et publication sur Google Play Store &amp; Apple App Store.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">Flutter Mobile</span>
+              <span class="stack-pill">OneSignal</span>
+              <span class="stack-pill">Google Play</span>
+              <span class="stack-pill">App Store</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-client" style="margin:0;">Disponible sur Stores</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 7: DevsCiwara -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/images/devsciwara.png" alt="DevsCiwara Coding Challenge">
+            <span class="project-tag-badge">EdTech &amp; Coding</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">DevsCiwara — Coding Arena</div>
+            <div class="project-client">ODC &amp; DevsCiwara</div>
+            <p class="project-desc">
+              Plateforme d évaluation et de compétitions de code en direct, messagerie instantanée, notifications push et classements temps réel.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">Spring Boot</span>
+              <span class="stack-pill">Angular</span>
+              <span class="stack-pill">Ionic</span>
+              <span class="stack-pill">Real-Time</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-client" style="margin:0;">Plateforme Compétition</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 8: ERP Entreprise -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/images/ERP.jpg" alt="ERP Entreprise">
+            <span class="project-tag-badge">ERP &amp; Management</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">ERP Entreprise — Gestion Globale</div>
+            <div class="project-client">Orange Digital Center</div>
+            <p class="project-desc">
+              Système de gestion intégrée (ERP) multi-modules : ressources humaines, facturation, stocks et reporting financier d entreprise.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">Spring Boot</span>
+              <span class="stack-pill">Angular</span>
+              <span class="stack-pill">PostgreSQL</span>
+              <span class="stack-pill">Architecture Modulaire</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-client" style="margin:0;">Système ERP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 9: GMAO Parc Automobile -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/images/gmao.png" alt="GMAO Flotte Automobile">
+            <span class="project-tag-badge">GMAO Flotte</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">GMAO — Maintenance de Flotte</div>
+            <div class="project-client">African Wealths Development</div>
+            <p class="project-desc">
+              Solution complète de gestion de maintenance assistée par ordinateur pour véhicules, alertes d entretien kilométriques et gestion des pièces de rechange.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">Spring Boot</span>
+              <span class="stack-pill">Angular</span>
+              <span class="stack-pill">MySQL</span>
+              <span class="stack-pill">Gestion de Parc</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-client" style="margin:0;">Maintenance Flotte</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 10: RentCare -->
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="assets/images/vehicule.png" alt="RentCare Gestion Véhicules">
+            <span class="project-tag-badge">Gestion de Flotte</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">RentCare — Location &amp; Flotte</div>
+            <div class="project-client">Projet d Études · INTEC-SUP</div>
+            <p class="project-desc">
+              Application web de gestion de flotte et de location de véhicules avec suivi d entretien, réservations en ligne et gestion comptable.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">PHP POO</span>
+              <span class="stack-pill">MySQL</span>
+              <span class="stack-pill">WAMP</span>
+              <span class="stack-pill">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-client" style="margin:0;">Gestion &amp; Réservation</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== SKILLS MATRIX (COMPLETE STACKS INCLUDED) ====== -->
-  <section id="skills">
-    <div class="section-head">
-      <span class="tag-subtitle">Compétences</span>
-      <h2 class="title-section-main">Stack Technique Complète</h2>
-      <p class="desc-section-main">Explorez l'ensemble de mes compétences organisées par domaines d'expertise.</p>
-    </div>
-
-    <div class="skills-tabs-container">
-      <div class="skills-tab-nav">
-        <button class="skill-tab-button active" onclick="switchSkillTab('backend')">Backend & Architecture</button>
-        <button class="skill-tab-button" onclick="switchSkillTab('frontend')">Front-End & Mobile</button>
-        <button class="skill-tab-button" onclick="switchSkillTab('devops')">DevOps & Databases</button>
-        <button class="skill-tab-button" onclick="switchSkillTab('management')">Design & Management</button>
+  <!-- ====== SECTION 3 & 4: FORMATIONS & CERTIFICATIONS ====== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">3 &amp; 4. Parcours Académique &amp; Certifications</span>
+        <h2 class="section-title">Formations Supérieures &amp; Accréditations</h2>
+        <p class="section-desc">
+          Une formation d excellence alliant les sciences informatiques et la gouvernance d entreprise.
+        </p>
       </div>
 
-      <div class="skill-list-grid" id="skillsGrid">
-        <div class="skill-box-card"><span class="skill-box-name">Java Spring Boot & Spring Security</span><span class="skill-box-badge">92%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">APIs REST & Microservices</span><span class="skill-box-badge">90%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">PHP / Laravel Framework</span><span class="skill-box-badge">95%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Node.js & Express</span><span class="skill-box-badge">80%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Strapi & Jmix Headless CMS</span><span class="skill-box-badge">85%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">WordPress CMS</span><span class="skill-box-badge">85%</span></div>
-      </div>
-    </div>
-  </section>
+      <div class="edu-cert-grid">
+        <!-- Diplômes -->
+        <div class="edu-column">
+          <h3><i class="fas fa-graduation-cap"></i> Diplômes Académiques</h3>
+          <div class="edu-list">
+            <div class="edu-card">
+              <div class="edu-year">2021 — 2022</div>
+              <div class="edu-degree">Licence en Génie Logiciel</div>
+              <div class="edu-school">INTEC-SUP (Institut des Technologies Supérieures)</div>
+            </div>
 
-  <!-- ====== CONTACT ====== -->
-  <section id="contact">
-    <div class="section-head">
-      <span class="tag-subtitle">Contact</span>
-      <h2 class="title-section-main">Me Contacter</h2>
-      <p class="desc-section-main">Une question, un projet ou une opportunité ? Écrivez-moi directement.</p>
-    </div>
+            <div class="edu-card">
+              <div class="edu-year">2019 — 2021</div>
+              <div class="edu-degree">Licence en Gestion des PME</div>
+              <div class="edu-school">Faculté des Sciences Économiques et de Gestion (FSEG) Bamako</div>
+            </div>
 
-    <div class="contact-layout-clean">
-      <div>
-        <a href="mailto:camaramamady9160@gmail.com" class="contact-info-card">
-          <div style="font-size:1.4rem;color:var(--indigo-500)"><i class="fas fa-envelope"></i></div>
-          <div>
-            <div style="font-size:0.75rem;color:var(--text-slate-400);text-transform:uppercase">Email Direct</div>
-            <div style="font-weight:600">camaramamady9160@gmail.com</div>
+            <div class="edu-card">
+              <div class="edu-year">2019 — 2021</div>
+              <div class="edu-degree">DUT en Informatique de Gestion</div>
+              <div class="edu-school">INTEC-SUP</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-year">2019</div>
+              <div class="edu-degree">Baccalauréat Malien (Série TSECO)</div>
+              <div class="edu-school">Lycée Moderne de Badalabougou (LMBS)</div>
+            </div>
           </div>
-        </a>
+        </div>
 
-        <a href="tel:+22391228829" class="contact-info-card">
-          <div style="font-size:1.4rem;color:var(--indigo-500)"><i class="fas fa-phone"></i></div>
-          <div>
-            <div style="font-size:0.75rem;color:var(--text-slate-400);text-transform:uppercase">Téléphone 1</div>
-            <div style="font-weight:600">+223 91 22 88 29</div>
-          </div>
-        </a>
+        <!-- Certifications -->
+        <div class="cert-column">
+          <h3><i class="fas fa-certificate"></i> Certifications Spécialisées</h3>
+          <div class="cert-list">
+            <div class="cert-card">
+              <div class="edu-year">2022 — 2023</div>
+              <div class="edu-degree">Certificat Développeur Web &amp; Mobile Full Stack</div>
+              <div class="edu-school">Orange Digital Center (ODC) &amp; Simplon</div>
+            </div>
 
-        <a href="tel:+22360970725" class="contact-info-card">
-          <div style="font-size:1.4rem;color:var(--indigo-500)"><i class="fas fa-phone-alt"></i></div>
-          <div>
-            <div style="font-size:0.75rem;color:var(--text-slate-400);text-transform:uppercase">Téléphone 2</div>
-            <div style="font-weight:600">+223 60 97 07 25</div>
-          </div>
-        </a>
+            <div class="cert-card">
+              <div class="edu-year">2022 — 2023</div>
+              <div class="edu-degree">Certifications en Développement Avancé</div>
+              <div class="edu-school">Coursera — Spécialisations Modernes</div>
+            </div>
 
-        <div class="contact-info-card">
-          <div style="font-size:1.4rem;color:var(--indigo-500)"><i class="fas fa-map-marker-alt"></i></div>
-          <div>
-            <div style="font-size:0.75rem;color:var(--text-slate-400);text-transform:uppercase">Adresse</div>
-            <div style="font-weight:600">Sebenikoro, Bamako — Mali</div>
+            <div class="cert-card">
+              <div class="edu-year">2022 — 2023</div>
+              <div class="edu-degree">Certifications Python &amp; Bases de Données SQL</div>
+              <div class="edu-school">Coursera — Algorithmes, Requêtage &amp; Données</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div>
-        <form class="contact-form-box" id="contactForm">
-          <input type="text" id="form-nom" class="form-input-slate" placeholder="Votre nom complet" required>
-          <input type="email" id="form-email" class="form-input-slate" placeholder="Votre adresse email" required>
-          <input type="text" id="form-sujet" class="form-input-slate" placeholder="Sujet de votre message">
-          <textarea id="form-message" class="form-input-slate" style="height:130px;resize:none" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
-          <button type="submit" id="btn-submit-form" class="btn-indigo-solid" style="justify-content:center;width:100%">
-            Envoyer le message <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
+      <!-- Langues & Centres d Intérêt -->
+      <div class="extras-grid">
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem;">
+            <i class="fas fa-language" style="color:var(--accent-cyan); margin-right:0.5rem;"></i> 8. Langues
+          </h3>
+          <div class="lang-grid">
+            <div class="lang-card">
+              <div class="lang-name">Français</div>
+              <div class="lang-level">Courant / Travail</div>
+            </div>
+            <div class="lang-card">
+              <div class="lang-name">Anglais</div>
+              <div class="lang-level">Technique &amp; Pro</div>
+            </div>
+            <div class="lang-card">
+              <div class="lang-name">Bambara</div>
+              <div class="lang-level">Langue Maternelle</div>
+            </div>
+          </div>
+        </div>
 
-        <div id="contact-feedback" style="display:none;margin-top:1rem;padding:1rem;background:rgba(16,185,129,0.15);border:1px solid var(--emerald-500);border-radius:var(--radius-md);color:#fff;text-align:center">
-          ✓ Merci ! Votre client de messagerie s'ouvre pour valider l'envoi à <strong>camaramamady9160@gmail.com</strong>.
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 1.25rem;">
+            <i class="fas fa-heart" style="color:var(--primary-light); margin-right:0.5rem;"></i> 9. Centres d Intérêt &amp; Loisirs
+          </h3>
+          <div class="interest-grid">
+            <div class="interest-item">
+              <i class="fas fa-futbol"></i>
+              <div class="interest-text">
+                <div class="title">Football</div>
+                <div class="sub">FC Barcelona &amp; Man City</div>
+              </div>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-dumbbell"></i>
+              <div class="interest-text">
+                <div class="title">Fitness &amp; Musculation</div>
+                <div class="sub">Entraînement régulier</div>
+              </div>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-film"></i>
+              <div class="interest-text">
+                <div class="title">Séries &amp; Suspense</div>
+                <div class="sub">Suits, Blacklist, Breaking Bad</div>
+              </div>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-motorcycle"></i>
+              <div class="interest-text">
+                <div class="title">Moto</div>
+                <div class="sub">TVS Apache RTR</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION: CONTACT ====== -->
+  <section class="section" id="contact" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Me Contacter</span>
+        <h2 class="section-title">Échangeons sur Votre Futur Projet</h2>
+        <p class="section-desc">
+          Que ce soit pour une mission d architecture logicielle, le développement d un produit critique ou une opportunité professionnelle.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <div class="contact-info-list">
+            <a href="mailto:camaramamady9160@gmail.com" class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <div class="contact-label">Email Professionnel</div>
+                <div class="contact-val">camaramamady9160@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="tel:+22391228829" class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <div class="contact-label">Téléphone Principal</div>
+                <div class="contact-val">+223 91 22 88 29</div>
+              </div>
+            </a>
+
+            <a href="tel:+22360970725" class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <div class="contact-label">Téléphone Secondaire</div>
+                <div class="contact-val">+223 60 97 07 25</div>
+              </div>
+            </a>
+
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-location-dot"></i>
+              </div>
+              <div>
+                <div class="contact-label">Localisation</div>
+                <div class="contact-val">Sebenikoro, Bamako — Mali</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label class="form-label" for="formName">Nom complet</label>
+              <input type="text" id="formName" class="form-input" placeholder="Ex: Jean Dupont" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formEmail">Adresse Email</label>
+              <input type="email" id="formEmail" class="form-input" placeholder="Ex: jean.dupont@entreprise.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formSubject">Sujet / Projet</label>
+              <input type="text" id="formSubject" class="form-input" placeholder="Ex: Mission Architecture Backend / Proposition" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formMessage">Votre message</label>
+              <textarea id="formMessage" class="form-textarea" placeholder="Détaillez vos besoins techniques, délais ou objectifs..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;" id="formBtn">
+              <i class="fas fa-paper-plane"></i> Envoyer le Message
+            </button>
+
+            <div id="contactStatus" style="display:none; margin-top:1rem; padding:0.85rem; border-radius:8px; font-size:0.85rem; text-align:center;"></div>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ====== FOOTER ====== -->
-  <footer id="footer">
-    <div>© 2026 Camara Mamady — Architecte Backend & Full Stack Engineer · Bamako, Mali</div>
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <strong>Mamady Camara</strong> — Software Developer &amp; Systems Architect
+      </div>
+
+      <div class="footer-copy">
+        &copy; 2026 Mamady Camara. Tous droits réservés · Bamako, Mali.
+      </div>
+
+      <div class="footer-socials">
+        <a href="mailto:camaramamady9160@gmail.com" class="social-icon-btn" title="Email" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+22391228829" class="social-icon-btn" title="Téléphone" aria-label="Téléphone">
+          <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://github.com/Mamdy017" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
   </footer>
 
-  <!-- ====== SCRIPTS ====== -->
+  <!-- ====== JAVASCRIPT LOGIC ====== -->
   <script>
-  (function() {
-    /* Smooth Navigation Links for all anchors */
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        if (targetId && targetId !== '#') {
-          const targetEl = document.querySelector(targetId);
-          if (targetEl) {
-            e.preventDefault();
-            const y = targetEl.getBoundingClientRect().top + window.scrollY - 70;
-            window.scrollTo({ top: y, behavior: 'smooth' });
+    document.addEventListener("DOMContentLoaded", function() {
+      // 1. Typewriter Effect
+      const words = [
+        "Architecte Backend Java & Spring Boot",
+        "Lead Full Stack & Microservices",
+        "Moteur de Règles Métier (Drools)",
+        "Sécurité Applicative (OAuth2 / Keycloak)",
+        "Double Compétence Génie Logiciel & Gestion PME"
+      ];
+      let wordIdx = 0;
+      let charIdx = 0;
+      let isDeleting = false;
+      const typedElement = document.getElementById("typedText");
 
-            // Close mobile menu if open
-            const mob = document.getElementById('mobileMenu');
-            if (mob) mob.style.display = 'none';
-          }
+      function typeWriter() {
+        const currentWord = words[wordIdx];
+        if (isDeleting) {
+          typedElement.textContent = currentWord.substring(0, charIdx - 1);
+          charIdx--;
+        } else {
+          typedElement.textContent = currentWord.substring(0, charIdx + 1);
+          charIdx++;
+        }
+
+        let speed = isDeleting ? 30 : 65;
+
+        if (!isDeleting && charIdx === currentWord.length) {
+          speed = 2200;
+          isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+          isDeleting = false;
+          wordIdx = (wordIdx + 1) % words.length;
+          speed = 400;
+        }
+
+        setTimeout(typeWriter, speed);
+      }
+      typeWriter();
+
+      // 2. Navbar Scroll Behavior
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", function() {
+        if (window.scrollY > 40) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
         }
       });
+
+      // 3. Mobile Navigation Toggle
+      const navToggle = document.getElementById("navToggle");
+      const mobileNav = document.getElementById("mobileNav");
+      navToggle.addEventListener("click", function() {
+        mobileNav.classList.toggle("open");
+        const icon = navToggle.querySelector("i");
+        if (mobileNav.classList.contains("open")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-xmark");
+        } else {
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      document.querySelectorAll(".mob-link").forEach(function(link) {
+        link.addEventListener("click", function() {
+          mobileNav.classList.remove("open");
+          const icon = navToggle.querySelector("i");
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+        });
+      });
+
+      // 4. Skills Tabs Switcher
+      const skillTabBtns = document.querySelectorAll(".skill-tab-btn");
+      skillTabBtns.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          skillTabBtns.forEach(function(b) { b.classList.remove("active"); });
+          this.classList.add("active");
+
+          const tabName = this.getAttribute("data-tab");
+          document.querySelectorAll(".skills-content-group").forEach(function(group) {
+            group.classList.remove("active");
+          });
+
+          const activeGroup = document.getElementById("tab-" + tabName);
+          if (activeGroup) {
+            activeGroup.classList.add("active");
+          }
+        });
+      });
+
+      // 5. Contact Form Handler (Direct Mailto redirection with fallback)
+      const contactForm = document.getElementById("contactForm");
+      const contactStatus = document.getElementById("contactStatus");
+      const formBtn = document.getElementById("formBtn");
+
+      contactForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const name = document.getElementById("formName").value.trim();
+        const email = document.getElementById("formEmail").value.trim();
+        const subject = document.getElementById("formSubject").value.trim();
+        const message = document.getElementById("formMessage").value.trim();
+
+        formBtn.disabled = true;
+        formBtn.innerHTML = "<i class="fas fa-spinner fa-spin"></i> Préparation de l envoi...";
+
+        const mailtoUri = "mailto:camaramamady9160@gmail.com?subject=" + 
+                          encodeURIComponent("[Portfolio Contact] " + subject) + 
+                          "&body=" + encodeURIComponent("Nom: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
+
+        setTimeout(function() {
+          window.location.href = mailtoUri;
+          contactStatus.style.display = "block";
+          contactStatus.style.background = "rgba(16, 185, 129, 0.15)";
+          contactStatus.style.border = "1px solid rgba(16, 185, 129, 0.3)";
+          contactStatus.style.color = "#10b981";
+          contactStatus.innerHTML = "<i class="fas fa-check-circle"></i> Votre messagerie s ouvre pour finaliser l envoi. Vous pouvez aussi m écrire directement à <strong>camaramamady9160@gmail.com</strong>.";
+          
+          formBtn.disabled = false;
+          formBtn.innerHTML = "<i class="fas fa-paper-plane"></i> Envoyer le Message";
+          contactForm.reset();
+        }, 800);
+      });
     });
-
-    /* Typed text loop */
-    const typed = document.getElementById('heroTyped');
-    const words = [
-      'Architecte Backend & Lead UI (BrandOpera)',
-      'Développeur Full Stack (Java, Spring, React)',
-      'Double Diplôme Génie Logiciel & Gestion PME'
-    ];
-    let wi = 0, ci = 0, deleting = false;
-    function typeLoop() {
-      const word = words[wi];
-      if (!deleting) {
-        typed.textContent = word.slice(0, ++ci);
-        if (ci === word.length) { deleting = true; setTimeout(typeLoop, 2000); return; }
-        setTimeout(typeLoop, 75);
-      } else {
-        typed.textContent = word.slice(0, --ci);
-        if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; setTimeout(typeLoop, 400); return; }
-        setTimeout(typeLoop, 35);
-      }
-    }
-    setTimeout(typeLoop, 500);
-
-    /* Navbar Scroll */
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) document.getElementById('navbar').classList.add('scrolled');
-      else document.getElementById('navbar').classList.remove('scrolled');
-    });
-
-    /* Mobile Toggle */
-    const toggle = document.getElementById('navToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    toggle.addEventListener('click', () => {
-      mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
-    });
-
-    /* Contact Form Functionality with mailto */
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const nom = document.getElementById('form-nom').value;
-      const email = document.getElementById('form-email').value;
-      const sujet = document.getElementById('form-sujet').value || 'Prise de contact portfolio';
-      const message = document.getElementById('form-message').value;
-
-      const mailtoLink = `mailto:camaramamady9160@gmail.com?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent("Nom: " + nom + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
-      
-      window.location.href = mailtoLink;
-
-      const feedback = document.getElementById('contact-feedback');
-      feedback.style.display = 'block';
-
-      const btn = document.getElementById('btn-submit-form');
-      btn.innerHTML = '✓ Envoi en cours...';
-      btn.style.background = 'var(--emerald-500)';
-
-      setTimeout(() => {
-        btn.innerHTML = 'Envoyer le message <i class="fas fa-paper-plane"></i>';
-        btn.style.background = '';
-        form.reset();
-      }, 4000);
-    });
-  })();
-
-  /* Dynamic Skill Tab Switcher */
-  function switchSkillTab(category) {
-    const btns = document.querySelectorAll('.skill-tab-button');
-    btns.forEach(b => b.classList.remove('active'));
-    event.target.classList.add('active');
-
-    const grid = document.getElementById('skillsGrid');
-    if (category === 'backend') {
-      grid.innerHTML = `
-        <div class="skill-box-card"><span class="skill-box-name">Java Spring Boot & Spring Security</span><span class="skill-box-badge">92%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">APIs REST & Microservices</span><span class="skill-box-badge">90%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">PHP / Laravel Framework</span><span class="skill-box-badge">95%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Node.js & Express</span><span class="skill-box-badge">80%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Strapi & Jmix Headless CMS</span><span class="skill-box-badge">85%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">WordPress CMS</span><span class="skill-box-badge">85%</span></div>
-      `;
-    } else if (category === 'frontend') {
-      grid.innerHTML = `
-        <div class="skill-box-card"><span class="skill-box-name">Dashboards UI & SVG Optimisé</span><span class="skill-box-badge">92%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Angular Framework</span><span class="skill-box-badge">88%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">React & Next.js</span><span class="skill-box-badge">85%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Flutter (Dart) Mobile</span><span class="skill-box-badge">82%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Ionic Framework Hybride</span><span class="skill-box-badge">92%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">HTML5 / CSS3 / JavaScript (ES6+)</span><span class="skill-box-badge">95%</span></div>
-      `;
-    } else if (category === 'devops') {
-      grid.innerHTML = `
-        <div class="skill-box-card"><span class="skill-box-name">Docker & Conteneurisation</span><span class="skill-box-badge">85%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Azure DevOps Pipelines CI/CD</span><span class="skill-box-badge">80%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Vercel Cloud Deployment</span><span class="skill-box-badge">90%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">MySQL & Oracle SQL</span><span class="skill-box-badge">88%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Firebase Realtime & Auth</span><span class="skill-box-badge">82%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Git / GitHub & Postman</span><span class="skill-box-badge">92%</span></div>
-      `;
-    } else if (category === 'management') {
-      grid.innerHTML = `
-        <div class="skill-box-card"><span class="skill-box-name">Gestion des PME & Stratégie Métier (FSEG)</span><span class="skill-box-badge">90%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Assurance Qualité (QA Testing)</span><span class="skill-box-badge">85%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Maquettage UI/UX (Figma, Canva)</span><span class="skill-box-badge">90%</span></div>
-        <div class="skill-box-card"><span class="skill-box-name">Photoshop Design Graphique</span><span class="skill-box-badge">85%</span></div>
-      `;
-    }
-  }
   </script>
-
 </body>
 </html>
