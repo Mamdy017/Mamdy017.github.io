@@ -206,16 +206,16 @@
       </div>
 
       <div class="skills-tabs">
-        <button class="skill-tab-btn active" data-tab="backend">
+        <button class="skill-tab-btn active" data-tab="backend" onclick="switchTab('backend', this)">
           <i class="fas fa-microchip"></i> Backend &amp; Architecture
         </button>
-        <button class="skill-tab-btn" data-tab="frontend">
+        <button class="skill-tab-btn" data-tab="frontend" onclick="switchTab('frontend', this)">
           <i class="fas fa-laptop-code"></i> Frontend, Mobile &amp; Test
         </button>
-        <button class="skill-tab-btn" data-tab="devops">
+        <button class="skill-tab-btn" data-tab="devops" onclick="switchTab('devops', this)">
           <i class="fas fa-cloud"></i> DevOps, Cloud &amp; Systèmes
         </button>
-        <button class="skill-tab-btn" data-tab="storage">
+        <button class="skill-tab-btn" data-tab="storage" onclick="switchTab('storage', this)">
           <i class="fas fa-database"></i> SGBD, Stockage &amp; Déploiement
         </button>
       </div>
@@ -1135,131 +1135,140 @@
 
   <!-- ====== JAVASCRIPT LOGIC ====== -->
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // 1. Typewriter Effect
-      const words = [
-        "Architecte Backend Java & Spring Boot",
-        "Lead Full Stack & Microservices",
-        "Moteur de Règles Métier (Drools)",
-        "Sécurité Applicative (OAuth2 / Keycloak)",
-        "Double Compétence Génie Logiciel & Gestion PME"
-      ];
-      let wordIdx = 0;
-      let charIdx = 0;
-      let isDeleting = false;
-      const typedElement = document.getElementById("typedText");
+  function switchTab(tabName, el) {
+    var allBtns = document.querySelectorAll(".skill-tab-btn");
+    for (var i = 0; i < allBtns.length; i++) {
+      allBtns[i].classList.remove("active");
+    }
+    if (el) {
+      el.classList.add("active");
+    }
 
-      function typeWriter() {
-        const currentWord = words[wordIdx];
-        if (isDeleting) {
-          typedElement.textContent = currentWord.substring(0, charIdx - 1);
-          charIdx--;
-        } else {
-          typedElement.textContent = currentWord.substring(0, charIdx + 1);
-          charIdx++;
-        }
+    var allGroups = document.querySelectorAll(".skills-content-group");
+    for (var j = 0; j < allGroups.length; j++) {
+      allGroups[j].classList.remove("active");
+    }
 
-        let speed = isDeleting ? 30 : 65;
+    var targetGroup = document.getElementById("tab-" + tabName);
+    if (targetGroup) {
+      targetGroup.classList.add("active");
+    }
+  }
 
-        if (!isDeleting && charIdx === currentWord.length) {
-          speed = 2200;
-          isDeleting = true;
-        } else if (isDeleting && charIdx === 0) {
-          isDeleting = false;
-          wordIdx = (wordIdx + 1) % words.length;
-          speed = 400;
-        }
+  document.addEventListener("DOMContentLoaded", function() {
+    var words = [
+      "Architecte Backend Java & Spring Boot",
+      "Lead Full Stack & Microservices",
+      "Moteur de Regles Metier (Drools)",
+      "Securite Applicative (OAuth2 / Keycloak)",
+      "Double Competence Genie Logiciel & Gestion PME"
+    ];
+    var wordIdx = 0;
+    var charIdx = 0;
+    var isDeleting = false;
+    var typedElement = document.getElementById("typedText");
 
-        setTimeout(typeWriter, speed);
+    function typeWriter() {
+      if (!typedElement) return;
+      var currentWord = words[wordIdx];
+      if (isDeleting) {
+        typedElement.textContent = currentWord.substring(0, charIdx - 1);
+        charIdx--;
+      } else {
+        typedElement.textContent = currentWord.substring(0, charIdx + 1);
+        charIdx++;
       }
-      typeWriter();
 
-      // 2. Navbar Scroll Behavior
-      const navbar = document.getElementById("navbar");
-      window.addEventListener("scroll", function() {
-        if (window.scrollY > 40) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
+      var speed = isDeleting ? 30 : 65;
 
-      // 3. Mobile Navigation Toggle
-      const navToggle = document.getElementById("navToggle");
-      const mobileNav = document.getElementById("mobileNav");
+      if (!isDeleting && charIdx === currentWord.length) {
+        speed = 2200;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        wordIdx = (wordIdx + 1) % words.length;
+        speed = 400;
+      }
+
+      setTimeout(typeWriter, speed);
+    }
+    typeWriter();
+
+    var navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", function() {
+      if (!navbar) return;
+      if (window.scrollY > 40) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+    var navToggle = document.getElementById("navToggle");
+    var mobileNav = document.getElementById("mobileNav");
+    if (navToggle && mobileNav) {
       navToggle.addEventListener("click", function() {
         mobileNav.classList.toggle("open");
-        const icon = navToggle.querySelector("i");
-        if (mobileNav.classList.contains("open")) {
-          icon.classList.remove("fa-bars");
-          icon.classList.add("fa-xmark");
-        } else {
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
+        var icon = navToggle.querySelector("i");
+        if (icon) {
+          if (mobileNav.classList.contains("open")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+          } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+          }
         }
       });
 
-      document.querySelectorAll(".mob-link").forEach(function(link) {
-        link.addEventListener("click", function() {
+      var mobLinks = document.querySelectorAll(".mob-link");
+      for (var k = 0; k < mobLinks.length; k++) {
+        mobLinks[k].addEventListener("click", function() {
           mobileNav.classList.remove("open");
-          const icon = navToggle.querySelector("i");
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
-        });
-      });
-
-      // 4. Skills Tabs Switcher
-      const skillTabBtns = document.querySelectorAll(".skill-tab-btn");
-      skillTabBtns.forEach(function(btn) {
-        btn.addEventListener("click", function() {
-          skillTabBtns.forEach(function(b) { b.classList.remove("active"); });
-          this.classList.add("active");
-
-          const tabName = this.getAttribute("data-tab");
-          document.querySelectorAll(".skills-content-group").forEach(function(group) {
-            group.classList.remove("active");
-          });
-
-          const activeGroup = document.getElementById("tab-" + tabName);
-          if (activeGroup) {
-            activeGroup.classList.add("active");
+          var icon = navToggle.querySelector("i");
+          if (icon) {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
           }
         });
-      });
+      }
+    }
 
-      // 5. Contact Form Handler (Direct Mailto redirection with fallback)
-      const contactForm = document.getElementById("contactForm");
-      const contactStatus = document.getElementById("contactStatus");
-      const formBtn = document.getElementById("formBtn");
+    var contactForm = document.getElementById("contactForm");
+    var contactStatus = document.getElementById("contactStatus");
+    var formBtn = document.getElementById("formBtn");
 
+    if (contactForm && formBtn) {
       contactForm.addEventListener("submit", function(e) {
         e.preventDefault();
-        const name = document.getElementById("formName").value.trim();
-        const email = document.getElementById("formEmail").value.trim();
-        const subject = document.getElementById("formSubject").value.trim();
-        const message = document.getElementById("formMessage").value.trim();
+        var name = document.getElementById("formName").value.trim();
+        var email = document.getElementById("formEmail").value.trim();
+        var subject = document.getElementById("formSubject").value.trim();
+        var message = document.getElementById("formMessage").value.trim();
 
         formBtn.disabled = true;
-        formBtn.innerHTML = "<i class="fas fa-spinner fa-spin"></i> Préparation de l envoi...";
+        formBtn.innerHTML = "<i class=\"fas fa-spinner fa-spin\"></i> Preparation...";
 
-        const mailtoUri = "mailto:camaramamady9160@gmail.com?subject=" + 
-                          encodeURIComponent("[Portfolio Contact] " + subject) + 
-                          "&body=" + encodeURIComponent("Nom: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
+        var mailtoUri = "mailto:camaramamady9160@gmail.com?subject=" + 
+                        encodeURIComponent("[Portfolio Contact] " + subject) + 
+                        "&body=" + encodeURIComponent("Nom: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
 
         setTimeout(function() {
           window.location.href = mailtoUri;
-          contactStatus.style.display = "block";
-          contactStatus.style.background = "rgba(16, 185, 129, 0.15)";
-          contactStatus.style.border = "1px solid rgba(16, 185, 129, 0.3)";
-          contactStatus.style.color = "#10b981";
-          contactStatus.innerHTML = "<i class="fas fa-check-circle"></i> Votre messagerie s ouvre pour finaliser l envoi. Vous pouvez aussi m écrire directement à <strong>camaramamady9160@gmail.com</strong>.";
-          
+          if (contactStatus) {
+            contactStatus.style.display = "block";
+            contactStatus.style.background = "rgba(16, 185, 129, 0.15)";
+            contactStatus.style.border = "1px solid rgba(16, 185, 129, 0.3)";
+            contactStatus.style.color = "#10b981";
+            contactStatus.innerHTML = "<i class=\"fas fa-check-circle\"></i> Messagerie ouverte pour valider l envoi direct.";
+          }
           formBtn.disabled = false;
-          formBtn.innerHTML = "<i class="fas fa-paper-plane"></i> Envoyer le Message";
+          formBtn.innerHTML = "<i class=\"fas fa-paper-plane\"></i> Envoyer le Message";
           contactForm.reset();
         }, 800);
       });
-    });
-  </script>
+    }
+  });
+</script>
 </body>
 </html>
